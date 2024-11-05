@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="../main.html"><img src="../img/logo.png" width="210" alt=""></a>
+    </div>
+    <img src="../img/ajjil.png" alt="" class="ajjil">
+    <div class="buttons">
+        <a href="home.html" class="back-button">Back</a>
+    </div>
+</header>
+
+<div class="bgContainer">
+    <table id="topic-table">
+        <thead>
+            <tr>
+                <th>Tauheed</th>
+                <th>Adl</th>
+                <th>Nabuwat</th>
+                <th>Imamat</th>
+                <th>Mehdaviyat</th>
+                <th>Qayamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be generated here -->
+        </tbody>
+    </table>
+
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img src="../img/logo.png" alt="Image 1" width="25%" class="logoPopup">
+        <div class="popup-content" id="popup-content"></div>
+        <footer>
+            <img src="../img/almtv-logo.png" alt="alm logo" width="210">
+        </footer>
+    </div>
+</div>
+
+<script>
+    const topics = [400, 800, 1200, 1600, 2000];
+const topicNames = ["Tauheed", "Adl", "Nabuwat", "Imamat", "Mehdaviyat", "Qayamat"]; // Define topic names
+
+// Questions for each topic, 5 questions per topic
+const questions = [
+    [
+        "What are the core principles of Tauheed?",  // Question for 400
+        "How does Tauheed influence Muslim spirituality?", // Question for 800
+        "What are the practical implications of Tauheed in daily life?", // Question for 1200
+        "What is the relationship between Tauheed and ethics?", // Question for 1600
+        "How do different Islamic schools interpret Tauheed?" // Question for 2000
+    ],
+    [
+        "How does the concept of Adl manifest in Islamic teachings?", // Question for 400
+        "In what ways is Adl important for justice in society?", // Question for 800
+        "What role does Adl play in conflict resolution?", // Question for 1200
+        "Can you describe instances of Adl in Islamic history?", // Question for 1600
+        "What impact does Adl have on personal moral conduct?" // Question for 2000
+    ],
+    [
+        "What is the significance of Nabuwat in Islam?", // Question for 400
+        "What are the characteristics of the Prophets recognized in Islam?", // Question for 800
+        "How does the concept of Nabuwat influence Islamic law?", // Question for 1200
+        "What challenges did the Prophets face in their missions?", // Question for 1600
+        "How does belief in Nabuwat shape a Muslim's faith?" // Question for 2000
+    ],
+    [
+        "What are the key features of Imamat?", // Question for 400
+        "How does Imamat contribute to community leadership?", // Question for 800
+        "What qualities should an Imam possess?", // Question for 1200
+        "In what ways can Imamat be seen in contemporary Islamic societies?", // Question for 1600
+        "How does one determine the legitimacy of an Imam?" // Question for 2000
+    ],
+    [
+        "What is the essence of Mehdaviyat in Islamic belief?", // Question for 400
+        "Who is recognized as the Mahdi in Islamic theology?", // Question for 800
+        "What events are foretold to occur during the Mahdi's appearance?", // Question for 1200
+        "How does Mehdaviyat influence the hopes of Muslims?", // Question for 1600
+        "What is the importance of awaiting the Mahdi in Islam?" // Question for 2000
+    ],
+    [
+        "What does Qayamat represent in Islamic eschatology?", // Question for 400
+        "What signs are associated with the approach of Qayamat?", // Question for 800
+        "How do different interpretations of Qayamat exist among cultures?", // Question for 1200
+        "What guidance does the Quran provide regarding Qayamat?", // Question for 1600
+        "How does the belief in Qayamat affect ethical behavior in Muslims?" // Question for 2000
+    ]
+];
+
+
+    function generateTableRows() {
+        const tbody = document.querySelector('#topic-table tbody');
+        for (let rowIndex = 0; rowIndex < topics.length; rowIndex++) {
+            const row = document.createElement('tr');
+            // Populate each cell in the row with the corresponding topic value
+            for (let colIndex = 0; colIndex < 6; colIndex++) {
+                const cell = document.createElement('td');
+                cell.textContent = topics[rowIndex]; // Set each cell to display the corresponding topic value
+
+                // Set default background color
+                cell.style.backgroundColor = ""; // Default to table style
+
+                // Update the click handler to show the corresponding question for the specific topic
+                cell.onclick = () => showPopup(topicNames[colIndex], topics[rowIndex], questions[colIndex][rowIndex], cell);
+                row.appendChild(cell);
+            }
+            tbody.appendChild(row);
+        }
+    }
+
+    let currentCell = null;
+
+    function showPopup(topicName, point, question, cell) {
+        // Update the popup content
+        const content = document.getElementById("popup-content");
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
+        document.getElementById("popup").style.display = "flex"; // Show the popup
+
+        // Set currentCell to the clicked cell for clearing later
+        currentCell = cell;
+    }
+
+    function closePopup() {
+        if (currentCell) {
+            currentCell.innerText = ""; // Clear cell text when closing popup
+            currentCell.classList.add("disabled"); // Add disabled class to the cell
+        }
+        document.getElementById("popup").style.display = "none"; // Hide the popup
+        currentCell = null; // Reset currentCell
+    }
+
+    // Generate the table rows on page load
+    window.onload = generateTableRows;
+</script>
+
+</body>
+</html>

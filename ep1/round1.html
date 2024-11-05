@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="../main.html"><img src="../img/logo.png" width="210" alt=""></a>
+    </div>
+    <img src="../img/ajjil.png" alt="" class="ajjil">
+    <div class="buttons">
+        <a href="home.html" class="back-button">Back</a>
+    </div>
+</header>
+
+<div class="bgContainer">
+    <table id="topic-table">
+        <thead>
+            <tr>
+                <th>Tauheed</th>
+                <th>Adl</th>
+                <th>Nabuwat</th>
+                <th>Imamat</th>
+                <th>Mehdaviyat</th>
+                <th>Qayamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be generated here -->
+        </tbody>
+    </table>
+
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img src="../img/logo.png" alt="Image 1" width="25%" class="logoPopup">
+        <div class="popup-content" id="popup-content"></div>
+        <footer>
+            <img src="../img/almtv-logo.png" alt="alm logo" width="210">
+        </footer>
+    </div>
+</div>
+
+<script>
+    const topics = [200, 400, 600, 800, 1000];
+    const topicNames = ["Tauheed", "Adl", "Nabuwat", "Imamat", "Mehdaviyat", "Qayamat"]; // Define topic names
+
+    // Questions for each topic, 5 questions per topic
+    const questions = [
+        [
+            "What is the significance of Tauheed?",  // Question for 200
+            "How does Tauheed impact daily life?",   // Question for 400
+            "What are the different forms of Tauheed?", // Question for 600
+            "How can one strengthen their Tauheed?",   // Question for 800
+            "What are common misconceptions about Tauheed?" // Question for 1000
+        ],
+        [
+            "What is the concept of Adl in Islam?", // Question for 200
+            "Why is Adl important in society?",      // Question for 400
+            "How is Adl reflected in Islamic law?",  // Question for 600
+            "Can you give examples of Adl from Islamic history?", // Question for 800
+            "What role does Adl play in personal conduct?" // Question for 1000
+        ],
+        [
+            "What is the role of Nabuwat?",          // Question for 200
+            "How many Prophets are recognized in Islam?", // Question for 400
+            "What are the qualities of a Prophet?",   // Question for 600
+            "How do Prophets communicate with God?",  // Question for 800
+            "Why is belief in Prophets essential for Muslims?" // Question for 1000
+        ],
+        [
+            "What is Imamat?",                        // Question for 200
+            "How does Imamat differ from Nabuwat?",   // Question for 400
+            "What are the characteristics of an Imam?", // Question for 600
+            "What is the role of Imams in the community?", // Question for 800
+            "How does one choose an Imam?"           // Question for 1000
+        ],
+        [
+            "What is Mehdaviyat?",                    // Question for 200
+            "Who is the Mahdi in Islamic eschatology?", // Question for 400
+            "What signs are associated with the appearance of the Mahdi?", // Question for 600
+            "How does Mehdaviyat influence Muslim beliefs?", // Question for 800
+            "What is the significance of waiting for the Mahdi?" // Question for 1000
+        ],
+        [
+            "What is the concept of Qayamat?",        // Question for 200
+            "What events are expected to occur on Qayamat?", // Question for 400
+            "How do different cultures view the end of the world?", // Question for 600
+            "What does the Quran say about Qayamat?", // Question for 800
+            "How does belief in Qayamat affect a Muslim's life?" // Question for 1000
+        ]
+    ];
+
+    function generateTableRows() {
+        const tbody = document.querySelector('#topic-table tbody');
+        for (let rowIndex = 0; rowIndex < topics.length; rowIndex++) {
+            const row = document.createElement('tr');
+            // Populate each cell in the row with the corresponding topic value
+            for (let colIndex = 0; colIndex < 6; colIndex++) {
+                const cell = document.createElement('td');
+                cell.textContent = topics[rowIndex]; // Set each cell to display the corresponding topic value
+
+                // Set default background color
+                cell.style.backgroundColor = ""; // Default to table style
+
+                // Update the click handler to show the corresponding question for the specific topic
+                cell.onclick = () => showPopup(topicNames[colIndex], topics[rowIndex], questions[colIndex][rowIndex], cell);
+                row.appendChild(cell);
+            }
+            tbody.appendChild(row);
+        }
+    }
+
+    let currentCell = null;
+
+    function showPopup(topicName, point, question, cell) {
+        // Update the popup content
+        const content = document.getElementById("popup-content");
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
+        document.getElementById("popup").style.display = "flex"; // Show the popup
+
+        // Set currentCell to the clicked cell for clearing later
+        currentCell = cell;
+    }
+
+    function closePopup() {
+        if (currentCell) {
+            currentCell.innerText = ""; // Clear cell text when closing popup
+            currentCell.classList.add("disabled"); // Add disabled class to the cell
+        }
+        document.getElementById("popup").style.display = "none"; // Hide the popup
+        currentCell = null; // Reset currentCell
+    }
+
+    // Generate the table rows on page load
+    window.onload = generateTableRows;
+</script>
+
+</body>
+</html>

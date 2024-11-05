@@ -1,0 +1,243 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;  /* Stack images vertically */
+    justify-content: center; /* Vertically center */
+    align-items: center;     /* Horizontally center */
+    height: 100vh;          /* Full viewport height */
+    position: relative;
+    
+}
+.container > *{
+    z-index: 2;
+}
+.container::before {
+    content: "";               /* Necessary for pseudo-element */
+    position: absolute;        /* Position it absolutely */
+    top: 0;                   /* Align to the top */
+    left: 0;                  /* Align to the left */
+    right: 0;                 /* Align to the right */
+    bottom: 0;                /* Align to the bottom */
+    background-image: url(../img/bg-wall.jpg);
+    background-size: cover;   /* Cover the entire container */
+    background-position: center; /* Center the image */
+    opacity: 0.5;             /* Set the opacity of the background */
+    z-index: 1;               /* Ensure it is below the content */
+}
+.container:after {
+    content: '';
+    background-image: url(../img/ahlebait.jpg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    opacity: 0.5;
+}
+.row {
+    display: flex;           /* Flex for the second row */
+    justify-content: center; /* Horizontally center */
+}
+
+.image {
+    margin: 10px;           /* Space between images */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    background: linear-gradient(to right, rgb(253 253 253 / 80%), rgba(255, 215, 0, 0.8)), linear-gradient(to right, #FFFFFF, #FFFFFF);
+}
+.bism,.sal{
+    position: absolute;
+    top: 20px;
+    mix-blend-mode: color-burn;
+    filter: saturate(0.5);
+}
+.bism{
+    right: 15%;
+}
+.sal{
+    left: 15%;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button {
+    background-color: #7b5a28;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+/* .bgContainer{
+    background-color: darkkhaki;
+} */
+
+.previous-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #7b5a28;
+    color: white;
+    table-layout: fixed;
+    border: 5px solid #7b5a28;
+    height: calc(100vh - 117px);
+}
+
+th, td {
+    border: 2px solid #000000;
+    padding: 8px;
+    text-align: center;
+    height: 10vh;
+    font-size: 2rem;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
+td{
+    font-size: 4rem;
+}
+
+.disabled {
+    background-color: lightgray; /* Change background color to indicate it's disabled */
+    pointer-events: none; /* Disable click events */
+    color: darkgray; /* Change text color to indicate it's disabled */
+    cursor: not-allowed;
+}
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.popup h3{
+    font-size: 3rem;
+    color: #823e18;
+    margin-top: 0;
+}
+.popup p{
+    font-size: 4rem;
+}
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 3rem;
+}
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+.roundCard {
+    display: block;
+    width: 260px;
+    height: 260px;
+    background: #7e502f;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 17%;
+    margin: 10px;
+    transition: all 0.3s;
+    background-image: url(../img/box.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 24px;
+}
+.roundCard:hover{
+    background-color: coral;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.12) !important;
+}
+.logoPopup{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+}
+footer img{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+.logoCenter{
+    text-align: center;
+}
+.roundCard.rac {
+    background-image: url(../img/rac.png);
+    background-position: center;
+    background-size: cover;
+    width: 450px;
+    height: 260px;
+    font-size: 4rem;
+}
+.ajjil{
+    width: 279px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
