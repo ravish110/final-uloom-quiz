@@ -22,12 +22,12 @@
     <table id="topic-table">
         <thead>
             <tr>
-                <th>Tauheed</th>
-                <th>Adl</th>
+                <th>Quran</th>
+                <th>Tawheed</th>
                 <th>Nabuwat</th>
                 <th>Imamat</th>
-                <th>Mehdaviyat</th>
-                <th>Qayamat</th>
+                <th>Mahdaviyat</th>
+                <th>Maad</th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +53,7 @@
 
     // Questions for each topic, 5 questions per topic with 4 options
     const questions = [
+        // quran
         [
             {
                 "question": "Which Prophet (a.s.) is alive and in occultation?",
@@ -100,41 +101,142 @@
                 ]
             }
         ],
+        // tawheed
         [
-            {question: "What is the concept of Adl in Islam?", options: ["Justice and fairness", "Compassion towards others", "Forgiveness of sins", "Enforcing the law"]}, 
-            {question: "Why is Adl important in society?", options: ["It maintains peace", "It ensures fairness", "It prevents oppression", "All of the above"]},
-            {question: "How is Adl reflected in Islamic law?", options: ["Through fair punishment", "Through protection of rights", "By resolving disputes", "All of the above"]},
-            {question: "Can you give examples of Adl from Islamic history?", options: ["Caliph Umar's justice", "The Prophet's forgiving nature", "The fairness of Caliph Ali", "All of the above"]},
-            {question: "What role does Adl play in personal conduct?", options: ["Treat others fairly", "Avoid oppression", "Help the needy", "All of the above"]}
+            {
+                "question": "Regular remembrance of Allah (s.w.t) keeps a person away from _______",
+                "options": []
+            },
+            {
+                "question": "Remembrance of ________ is the best remedy to get salvation from all difficulties and problems",
+                "options": ["Allah (s.w.t.)", "Holy Prophet (s.a.w.a.)", "Imam Ali (a.s.)", "Imam e Zamana (a.t.f.s)"]
+            },
+            {
+                "question": "Tauheed, without wilayat of Ahle bait (a.s.) has _______",
+                "options": ["Some Value", "No Value", "Some Reward", "None of Above"]
+            },
+            {
+                "question": "When one prays, Allah (s.w.t.) ______ grants what the wishes",
+                "options": ["Never", "Always", "Sometimes", "Often"]
+            },
+            {
+                "question": "As per Surah Hashr, Ayat 19 Those who _______ Allah (s.w.t.) are Transgressors",
+                "options": ["Believe", "Forsake", "Pray to", "Love"]
+            }
         ],
+        // nabuwat
         [
-            {question: "What is the role of Nabuwat?", options: ["To guide people", "To perform miracles", "To enforce law", "All of the above"]}, 
-            {question: "How many Prophets are recognized in Islam?", options: ["25", "124,000", "1000", "10,000"]},
-            {question: "What are the qualities of a Prophet?", options: ["Honesty", "Trustworthiness", "Knowledgeable", "All of the above"]},
-            {question: "How do Prophets communicate with God?", options: ["Through angels", "Through dreams", "Through direct revelation", "All of the above"]},
-            {question: "Why is belief in Prophets essential for Muslims?", options: ["It confirms divine guidance", "It strengthens faith", "It guides moral conduct", "All of the above"]}
+            {
+                "question": "Which Prophet (a.s.) is alive and in occultation",
+                "options": ["Hazrat Noah (a.s.)", "Hazrat Idris (a.s.)", "Hazrat Yusuf (a.s.)", "Hazrat Moosa (a.s.)"]
+            },
+            {
+                "question": "Prior to Islam what was the belief of the people of Mecca?",
+                "options": ["Judaism", "Christianity", "Polytheists", "Monotheists"]
+            },
+            {
+                "question": "Who is the author of the Book 'Al-Tawheed'",
+                "options": ["Shaikh Saduq (a.r.)", "Shaikh Mufeed (a.r.)", "Ahmed ibne Hambal", "Shaykh Muhammad ibn Abdul Wahhab"]
+            },
+            {
+                "question": "If one does not believe in the finality of Holy Prophet (s.a.w.a.), he is not a ________",
+                "options": ["Muslim", "Shia", "Kafir", "None of Above"]
+            },
+            {
+                "question": "What is the name of the adopted son of the Holy Prophet (s.a.w.a.)",
+                "options": ["Ibrahim ibn Zaid", "Abu Zarr e Gaffari", "Ishaq e Kalbi", "Zaid ibn Harris"]
+            }
         ],
+        // imamat
         [
-            {question: "What is Imamat?", options: ["Leadership in Islam", "Political role", "Religious guidance", "All of the above"]}, 
-            {question: "How does Imamat differ from Nabuwat?", options: ["Imamat is leadership after the Prophet", "Nabuwat is for Prophets only", "Both are leadership roles", "Imamat is for spiritual guidance only"]},
-            {question: "What are the characteristics of an Imam?", options: ["Divinely appointed", "Infallible", "Provides spiritual guidance", "All of the above"]},
-            {question: "What is the role of Imams in the community?", options: ["To provide leadership", "To ensure justice", "To guide spiritually", "All of the above"]},
-            {question: "How does one choose an Imam?", options: ["Through divine appointment", "By community election", "By self-proclamation", "By popular opinion"]}
+            {
+                "question": "What is Imamat?",
+                "options": ["Leadership in Islam", "Political role", "Religious guidance", "All of the above"]
+            },
+            {
+                "question": "How does Imamat differ from Nabuwat?",
+                "options": ["Imamat is leadership after the Prophet", "Nabuwat is for Prophets only", "Both are leadership roles", "Imamat is for spiritual guidance only"]
+            },
+            {
+                "question": "What are the characteristics of an Imam?",
+                "options": ["Divinely appointed", "Infallible", "Provides spiritual guidance", "All of the above"]
+            },
+            {
+                "question": "What is the role of Imams in the community?",
+                "options": ["To provide leadership", "To ensure justice", "To guide spiritually", "All of the above"]
+            },
+            {
+                "question": "How does one choose an Imam?",
+                "options": ["Through divine appointment", "By community election", "By self-proclamation", "By popular opinion"]
+            }
         ],
+        // mahdaviyat
         [
-            {question: "What is Mehdaviyat?", options: ["Belief in the Mahdi", "The return of the Prophet", "A new religious sect", "All of the above"]}, 
-            {question: "Who is the Mahdi in Islamic eschatology?", options: ["A savior", "A prophet", "A king", "A warrior"]},
-            {question: "What signs are associated with the appearance of the Mahdi?", options: ["Earthquakes", "The rise of false leaders", "The return of Jesus", "All of the above"]},
-            {question: "How does Mehdaviyat influence Muslim beliefs?", options: ["It reinforces faith in justice", "It gives hope for the future", "It stresses patience", "All of the above"]},
-            {question: "What is the significance of waiting for the Mahdi?", options: ["It encourages patience", "It strengthens community", "It gives hope in times of injustice", "All of the above"]}
+            {
+                "question": "Name the 3rd special deputy (Nayab-e-Khaas) of Imam-e-Zamana (a.t.f.s)",
+                "options": [
+                    "Abul Qasim Husain b. Rauh al-Nawbakhti (a.r.)",
+                    "Abul Ali b. Muhammad al-Seymouri",
+                    "Abu Amr Usman b. Saeed al-Amri (a.r.)",
+                    "Abu Jafar Mohammad b. Usman b. Saeed al-Amri (a.r.)"
+                ]
+            },
+            {
+                "question": "Which Imam (a.s.) received Imamat at an early age",
+                "options": [
+                    "Imam Ali (a.s.)",
+                    "Imam Moosa Kazim (a.s.)",
+                    "Imam Mohammed Taqi (a.s.)",
+                    "Imam Ali Reza (a.s.)"
+                ]
+            },
+            {
+                "question": "Other than Imam Mahdi (a.t.f.s.), which Imam has the most narrations attributed to him?",
+                "options": [
+                    "Imam Hussain (a.s.)",
+                    "Imam Ali (a.s.)",
+                    "Imam Sadiq (a.s.)",
+                    "Imam Reza (a.s.)"
+                ]
+            },
+            {
+                "question": "Which Imam (a.s.) said: If I reach his era, I will indeed serve him for my entire life",
+                "options": [
+                    "Imam Ali (a.s.)",
+                    "Imam Sajjad (a.s.)",
+                    "Imam Kazim (a.s.)",
+                    "Imam Sadiq (a.s.)"
+                ]
+            },
+            {
+                "question": "When Hazrat Saleh (a.s) returned to his people after a long time, they had split into factions (sects)",
+                "options": ["3", "8", "15", "20"]
+            }
         ],
+        // maad
         [
-            {question: "What is the concept of Qayamat?", options: ["The Day of Judgment", "The end of the world", "The resurrection of the dead", "All of the above"]}, 
-            {question: "What events are expected to occur on Qayamat?", options: ["Natural disasters", "The resurrection of the dead", "The final judgment", "All of the above"]},
-            {question: "How do different cultures view the end of the world?", options: ["As a divine event", "As a natural event", "As a time of renewal", "All of the above"]},
-            {question: "What does the Quran say about Qayamat?", options: ["It describes the end times", "It speaks about heaven and hell", "It emphasizes accountability", "All of the above"]},
-            {question: "How does belief in Qayamat affect a Muslim's life?", options: ["Encourages moral behavior", "Strengthens faith", "Promotes good deeds", "All of the above"]}
+            {
+                "question": "What phenomenon is used as a proof that the soul is non-materialistic?",
+                "options": ["Dreaming", "Walking in sleep", "Talking in sleep", "None of the above"]
+            },
+            {
+                "question": "What do wise people shine like according to the Torah?",
+                "options": ["Stars", "The sun", "The moon", "The earth"]
+            },
+            {
+                "question": "Which belief has the second highest number of verses in the Quran after Tauheed?",
+                "options": ["Namaz", "Hajj", "Qiyamat", "Charity"]
+            },
+            {
+                "question": "Which Prophet's experience with a decayed bone is used as proof of Qiyamat in Surah Yasin?",
+                "options": ["Prophet Moosa (a.s.)", "Prophet Nooh (a.s.)", "Prophet Ibrahim (a.s.)", "Prophet Muhammed (s.a.w.a.)"]
+            },
+            {
+                "question": "What phrase does Hazrat Isa (a.s.) use to refer to God in the Bible?",
+                "options": ["God of the dead", "God of the living", "God of knowledge", "God of creation"]
+            }
         ]
+
     ];
 
     // Function to generate the table rows dynamically
