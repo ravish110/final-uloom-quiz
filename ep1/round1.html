@@ -49,54 +49,95 @@
 
 <script>
     const topics = [200, 400, 600, 800, 1000];
-    const topicNames = ["Tauheed", "Adl", "Nabuwat", "Imamat", "Mehdaviyat", "Qayamat"]; // Define topic names
+    const topicNames = ["Quran", "Tawheed", "Nabuwat", "Imamat", "Mahdaviyat", "Maad"]; // Define topic names
 
-    // Questions for each topic, 5 questions per topic
+    // Questions for each topic, 5 questions per topic with 4 options
     const questions = [
         [
-            "What is the significance of Tauheed?",  // Question for 200
-            "How does Tauheed impact daily life?",   // Question for 400
-            "What are the different forms of Tauheed?", // Question for 600
-            "How can one strengthen their Tauheed?",   // Question for 800
-            "What are common misconceptions about Tauheed?" // Question for 1000
+            {
+                "question": "Which Prophet (a.s.) is alive and in occultation?",
+                "options": [
+                    "Hazrat Noah (a.s.)",
+                    "Hazrat Idris (a.s.)",
+                    "Hazrat Yusuf (a.s.)",
+                    "Hazrat Moosa (a.s.)"
+                ]
+            },
+            {
+                "question": "Prior to Islam, what was the belief of the people of Mecca?",
+                "options": [
+                    "Judaism",
+                    "Christianity",
+                    "Polytheists",
+                    "Monotheists"
+                ]
+            },
+            {
+                "question": "Who is the author of the Book \"Al-Tawheed\"?",
+                "options": [
+                    "Shaikh Saduq (a.r.)",
+                    "Shaikh Mufeed (a.r.)",
+                    "Ahmed ibne Hambal",
+                    "Shaykh Muhammad ibn Abdul Wahhab"
+                ]
+            },
+            {
+                "question": "If one does not believe in the finality of Holy Prophet (s.a.w.a.), he is not a ________",
+                "options": [
+                    "Muslim",
+                    "Shia",
+                    "Kafir",
+                    "None of Above"
+                ]
+            },
+            {
+                "question": "What is the name of the adopted son of the Holy Prophet (s.a.w.a.)?",
+                "options": [
+                    "Ibrahim ibn Zaid",
+                    "Abu Zarr e Gaffari",
+                    "Ishaq e Kalbi",
+                    "Zaid ibn Harris"
+                ]
+            }
         ],
         [
-            "What is the concept of Adl in Islam?", // Question for 200
-            "Why is Adl important in society?",      // Question for 400
-            "How is Adl reflected in Islamic law?",  // Question for 600
-            "Can you give examples of Adl from Islamic history?", // Question for 800
-            "What role does Adl play in personal conduct?" // Question for 1000
+            {question: "What is the concept of Adl in Islam?", options: ["Justice and fairness", "Compassion towards others", "Forgiveness of sins", "Enforcing the law"]}, 
+            {question: "Why is Adl important in society?", options: ["It maintains peace", "It ensures fairness", "It prevents oppression", "All of the above"]},
+            {question: "How is Adl reflected in Islamic law?", options: ["Through fair punishment", "Through protection of rights", "By resolving disputes", "All of the above"]},
+            {question: "Can you give examples of Adl from Islamic history?", options: ["Caliph Umar's justice", "The Prophet's forgiving nature", "The fairness of Caliph Ali", "All of the above"]},
+            {question: "What role does Adl play in personal conduct?", options: ["Treat others fairly", "Avoid oppression", "Help the needy", "All of the above"]}
         ],
         [
-            "What is the role of Nabuwat?",          // Question for 200
-            "How many Prophets are recognized in Islam?", // Question for 400
-            "What are the qualities of a Prophet?",   // Question for 600
-            "How do Prophets communicate with God?",  // Question for 800
-            "Why is belief in Prophets essential for Muslims?" // Question for 1000
+            {question: "What is the role of Nabuwat?", options: ["To guide people", "To perform miracles", "To enforce law", "All of the above"]}, 
+            {question: "How many Prophets are recognized in Islam?", options: ["25", "124,000", "1000", "10,000"]},
+            {question: "What are the qualities of a Prophet?", options: ["Honesty", "Trustworthiness", "Knowledgeable", "All of the above"]},
+            {question: "How do Prophets communicate with God?", options: ["Through angels", "Through dreams", "Through direct revelation", "All of the above"]},
+            {question: "Why is belief in Prophets essential for Muslims?", options: ["It confirms divine guidance", "It strengthens faith", "It guides moral conduct", "All of the above"]}
         ],
         [
-            "What is Imamat?",                        // Question for 200
-            "How does Imamat differ from Nabuwat?",   // Question for 400
-            "What are the characteristics of an Imam?", // Question for 600
-            "What is the role of Imams in the community?", // Question for 800
-            "How does one choose an Imam?"           // Question for 1000
+            {question: "What is Imamat?", options: ["Leadership in Islam", "Political role", "Religious guidance", "All of the above"]}, 
+            {question: "How does Imamat differ from Nabuwat?", options: ["Imamat is leadership after the Prophet", "Nabuwat is for Prophets only", "Both are leadership roles", "Imamat is for spiritual guidance only"]},
+            {question: "What are the characteristics of an Imam?", options: ["Divinely appointed", "Infallible", "Provides spiritual guidance", "All of the above"]},
+            {question: "What is the role of Imams in the community?", options: ["To provide leadership", "To ensure justice", "To guide spiritually", "All of the above"]},
+            {question: "How does one choose an Imam?", options: ["Through divine appointment", "By community election", "By self-proclamation", "By popular opinion"]}
         ],
         [
-            "What is Mehdaviyat?",                    // Question for 200
-            "Who is the Mahdi in Islamic eschatology?", // Question for 400
-            "What signs are associated with the appearance of the Mahdi?", // Question for 600
-            "How does Mehdaviyat influence Muslim beliefs?", // Question for 800
-            "What is the significance of waiting for the Mahdi?" // Question for 1000
+            {question: "What is Mehdaviyat?", options: ["Belief in the Mahdi", "The return of the Prophet", "A new religious sect", "All of the above"]}, 
+            {question: "Who is the Mahdi in Islamic eschatology?", options: ["A savior", "A prophet", "A king", "A warrior"]},
+            {question: "What signs are associated with the appearance of the Mahdi?", options: ["Earthquakes", "The rise of false leaders", "The return of Jesus", "All of the above"]},
+            {question: "How does Mehdaviyat influence Muslim beliefs?", options: ["It reinforces faith in justice", "It gives hope for the future", "It stresses patience", "All of the above"]},
+            {question: "What is the significance of waiting for the Mahdi?", options: ["It encourages patience", "It strengthens community", "It gives hope in times of injustice", "All of the above"]}
         ],
         [
-            "What is the concept of Qayamat?",        // Question for 200
-            "What events are expected to occur on Qayamat?", // Question for 400
-            "How do different cultures view the end of the world?", // Question for 600
-            "What does the Quran say about Qayamat?", // Question for 800
-            "How does belief in Qayamat affect a Muslim's life?" // Question for 1000
+            {question: "What is the concept of Qayamat?", options: ["The Day of Judgment", "The end of the world", "The resurrection of the dead", "All of the above"]}, 
+            {question: "What events are expected to occur on Qayamat?", options: ["Natural disasters", "The resurrection of the dead", "The final judgment", "All of the above"]},
+            {question: "How do different cultures view the end of the world?", options: ["As a divine event", "As a natural event", "As a time of renewal", "All of the above"]},
+            {question: "What does the Quran say about Qayamat?", options: ["It describes the end times", "It speaks about heaven and hell", "It emphasizes accountability", "All of the above"]},
+            {question: "How does belief in Qayamat affect a Muslim's life?", options: ["Encourages moral behavior", "Strengthens faith", "Promotes good deeds", "All of the above"]}
         ]
     ];
 
+    // Function to generate the table rows dynamically
     function generateTableRows() {
         const tbody = document.querySelector('#topic-table tbody');
         for (let rowIndex = 0; rowIndex < topics.length; rowIndex++) {
@@ -117,18 +158,35 @@
         }
     }
 
-    let currentCell = null;
-
-    function showPopup(topicName, point, question, cell) {
+    // Function to show the popup with question and options
+    function showPopup(topicName, point, questionObj, cell) {
         // Update the popup content
         const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
-        document.getElementById("popup").style.display = "flex"; // Show the popup
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+
+        // Create a container for options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('options-container');
+
+        // Display options as span elements
+        questionObj.options.forEach((option) => {
+            const optionElement = document.createElement('span');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Append the options container to the popup content
+        content.appendChild(optionsContainer);
+
+        // Show the popup
+        document.getElementById("popup").style.display = "flex";
 
         // Set currentCell to the clicked cell for clearing later
         currentCell = cell;
     }
 
+    // Function to close the popup and disable the cell
     function closePopup() {
         if (currentCell) {
             currentCell.innerText = ""; // Clear cell text when closing popup
