@@ -162,6 +162,7 @@ td{
     pointer-events: none; /* Disable click events */
     color: darkgray; /* Change text color to indicate it's disabled */
     cursor: not-allowed;
+    height: 18%;
 }
 .popup {
     display: none;
