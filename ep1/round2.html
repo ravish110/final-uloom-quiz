@@ -23,12 +23,11 @@
         <thead>
             <tr>
                 <th>Quran</th>
-<th>Tawheed</th>
-<th>Nabuwat</th>
-<th>Imamat</th>
-<th>Mahdaviyat</th>
-<th>Maad</th>
-
+                <th>Tawheed</th>
+                <th>Nabuwat</th>
+                <th>Imamat</th>
+                <th>Mahdaviyat</th>
+                <th>Maad</th>
             </tr>
         </thead>
         <tbody>
@@ -49,52 +48,245 @@
 </div>
 
 <script>
-    const topics = [400, 800, 1200, 1600, 2000];
+const topics = [400, 800, 1200, 1600, 2000];
 const topicNames = ["Quran", "Tawheed", "Nabuwat", "Imamat", "Mahdaviyat", "Maad"]; // Define topic names
 
 // Questions for each topic, 5 questions per topic
 const questions = [
     [
-        "What are the core principles of Tauheed?",  // Question for 400
-        "How does Tauheed influence Muslim spirituality?", // Question for 800
-        "What are the practical implications of Tauheed in daily life?", // Question for 1200
-        "What is the relationship between Tauheed and ethics?", // Question for 1600
-        "How do different Islamic schools interpret Tauheed?" // Question for 2000
+        {
+            "question": "In Holy Quran, the word \"بلاغ\" is used in what context?",
+            "options": [
+                "Reward of Allah (s.w.t.)",
+                "Remembrance of Allah (s.w.t.)",
+                "Message of Allah (s.w.t.)",
+                "None of Above"
+            ]
+        },
+        {
+            "question": "Imam Sadiq (AS) said: Do not recite the Quran hastily, but recite it with ________",
+            "options": [
+                "Loudness",
+                "Pause",
+                "Whispering",
+                "Speed"
+            ]
+        },
+        {
+            "question": "What are the \"Huruf e Yarmaloon\"?",
+            "options": [
+                "ب, ف, ق, ط, ث",
+                "ي, و, ل, م, ن",
+                "ي, ر, م, ل, و, ن",
+                "ح, خ, ع, غ, ا, ء"
+            ]
+        },
+        {
+            "question": "How many total Alphabets are there in the Arabic language?",
+            "options": [
+                "28",
+                "42",
+                "60",
+                "72"
+            ]
+        },
+        {
+            "question": "How many makharij are there of the throat?",
+            "options": [
+                "8",
+                "6",
+                "4",
+                "2"
+            ]
+        }
     ],
     [
-        "How does the concept of Adl manifest in Islamic teachings?", // Question for 400
-        "In what ways is Adl important for justice in society?", // Question for 800
-        "What role does Adl play in conflict resolution?", // Question for 1200
-        "Can you describe instances of Adl in Islamic history?", // Question for 1600
-        "What impact does Adl have on personal moral conduct?" // Question for 2000
+        {
+            "question": "Blind following in Usool-e-deen is _______",
+            "options": [
+                "Wajib",
+                "Makrooh",
+                "Mustahab",
+                "Haram"
+            ]
+        },
+        {
+            "question": "A man has ______ control over the constant changes occurring within and around him.",
+            "options": [
+                "Total",
+                "Limited",
+                "Complete",
+                "Zero"
+            ]
+        },
+        {
+            "question": "Allah (s.w.t.) does not accept any action that is not accompanied with _______",
+            "options": [
+                "Quranic Proof",
+                "Hadith",
+                "Truth",
+                "Recognition"
+            ]
+        },
+        {
+            "question": "When Allah (s.w.t.) desires good for a person, He grants him ________ knowledge.",
+            "options": [
+                "Worldly",
+                "Religious",
+                "Scientific",
+                "Secretive"
+            ]
+        },
+        {
+            "question": "Name the two signs of Allah (s.w.t.) which terrify people as well as give them good news.",
+            "options": [
+                "Earthquake & Tsunami",
+                "Flood & Rains",
+                "Lightning & Thunder",
+                "Volcano & Eclipse"
+            ]
+        }
     ],
     [
-        "What is the significance of Nabuwat in Islam?", // Question for 400
-        "What are the characteristics of the Prophets recognized in Islam?", // Question for 800
-        "How does the concept of Nabuwat influence Islamic law?", // Question for 1200
-        "What challenges did the Prophets face in their missions?", // Question for 1600
-        "How does belief in Nabuwat shape a Muslim's faith?" // Question for 2000
+        {
+            "question": "Who has been given the full tablet of “Ilmul Kitab”?",
+            "options": [
+                "Prophet Moosa (a.s.)",
+                "Prophet Isa (a.s.)",
+                "Prophet Ibrahim (a.s.)",
+                "None of the above"
+            ]
+        },
+        {
+            "question": "Hazrat Saleh’s (a.s.) miracle is the emergence of a ________from a mountain.",
+            "options": [
+                "Cow",
+                "Camel",
+                "Deer",
+                "Goat"
+            ]
+        },
+        {
+            "question": "\"Nabuwate Khassa\" is referred for which Prophet?",
+            "options": [
+                "Hazrat Ibrahim (a.s.)",
+                "Hazrat Moosa (a.s.)",
+                "Hazrat Rasool e Khuda (s.a.w.a)",
+                "Hazrat Isa (a.s.)"
+            ]
+        },
+        {
+            "question": "Allah (s.w.t.) has sent prophets for ________?",
+            "options": [
+                "Every Nation",
+                "Only Arab",
+                "Only Bani Israeel",
+                "Only Bani Asad"
+            ]
+        },
+        {
+            "question": "Name the people who were staying in Medina and awaiting the advent of a Prophet from Arab.",
+            "options": [
+                "Christian",
+                "Jews",
+                "Muslims",
+                "None of Above"
+            ]
+        }
     ],
     [
-        "What are the key features of Imamat?", // Question for 400
-        "How does Imamat contribute to community leadership?", // Question for 800
-        "What qualities should an Imam possess?", // Question for 1200
-        "In what ways can Imamat be seen in contemporary Islamic societies?", // Question for 1600
-        "How does one determine the legitimacy of an Imam?" // Question for 2000
+        {
+            "question": "What is the main purpose of the Islamic government as per Islamic theology?",
+            "options": [
+                "To Serve People",
+                "To Serve Allah (s.w.t.)",
+                "To conquer land",
+                "To generate wealth"
+            ]
+        },
+        {
+            "question": "According to Shiite beliefs, what does infallibility (عصمت) signify in an Imam?",
+            "options": [
+                "Partial guidance",
+                "Fear of Allah (s.w.t.)",
+                "Immunity from Sins",
+                "Complete Knowledge"
+            ]
+        },
+        {
+            "question": "According to Ayat e Wilayat, who is referred to as \"Ulil Amr\"?",
+            "options": [
+                "Prophets (a.s.)",
+                "Imams (a.s.)",
+                "Angels (a.s.)",
+                "All of the above"
+            ]
+        },
+        {
+            "question": "What does Shiite theology define as \"Lutf\" (Grace) in the context of Imamat?",
+            "options": [
+                "Guiding towards worldly affairs",
+                "Guiding towards religious affairs",
+                "Guiding towards Namaz",
+                "Guiding towards right path"
+            ]
+        },
+        {
+            "question": "In Shiite beliefs, what is the role of \"Nass\" (نَص) in Imamat?",
+            "options": [
+                "Infallibility",
+                "Divine support",
+                "Divine Command",
+                "None of above"
+            ]
+        }
     ],
     [
-        "What is the essence of Mehdaviyat in Islamic belief?", // Question for 400
-        "Who is recognized as the Mahdi in Islamic theology?", // Question for 800
-        "What events are foretold to occur during the Mahdi's appearance?", // Question for 1200
-        "How does Mehdaviyat influence the hopes of Muslims?", // Question for 1600
-        "What is the importance of awaiting the Mahdi in Islam?" // Question for 2000
-    ],
-    [
-        "What does Qayamat represent in Islamic eschatology?", // Question for 400
-        "What signs are associated with the approach of Qayamat?", // Question for 800
-        "How do different interpretations of Qayamat exist among cultures?", // Question for 1200
-        "What guidance does the Quran provide regarding Qayamat?", // Question for 1600
-        "How does the belief in Qayamat affect ethical behavior in Muslims?" // Question for 2000
+        {
+            "question": "Holy Prophet (s.a.w.a.) said: \"One who dies without recognizing the Imam of his time dies the death of ________\"",
+            "options": [
+                "Guidance",
+                "Ignorance",
+                "Disbeliever",
+                "Martyr"
+            ]
+        },
+        {
+            "question": "Name the person who tried to recite the Namaz e Janazah of Imam Hasan Askari (a.s.)",
+            "options": [
+                "Jafar",
+                "Hisam",
+                "Hamza",
+                "Mutawakkil"
+            ]
+        },
+        {
+            "question": "Name the book Shaikh e Saduq (a.r.) wrote on the command of Imam e Zamana (a.t.f.s)",
+            "options": [
+                "Kamaluddin",
+                "Al Kaafi",
+                "Behar ul Anwar",
+                "Al Ghadeer"
+            ]
+        },
+        {
+            "question": "Which Prophet's brother did not recognize him?",
+            "options": [
+                "Hazrat Nooh (a.s.)",
+                "Hazrat Moosa (a.s.)",
+                "Hazrat Uzair (a.s.)",
+                "Hazrat e Isa (a.s.)"
+            ]
+        },
+        {
+            "question": "How many Quranic Verses related to Imam e Zamana (a.t.f.s.) are mentioned in the book \"Al Muhajjah fi ma Nazala fil Qayam al Hujjah (a.s.)\"",
+            "options": [
+                "40",
+                "80",
+                "100",
+                "120"
+            ]
+        }
     ]
 ];
 
@@ -119,13 +311,29 @@ const questions = [
         }
     }
 
-    let currentCell = null;
-
-    function showPopup(topicName, point, question, cell) {
+    // Function to show the popup with question and options
+    function showPopup(topicName, point, questionObj, cell) {
         // Update the popup content
         const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
-        document.getElementById("popup").style.display = "flex"; // Show the popup
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+
+        // Create a container for options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('options-container');
+
+        // Display options as span elements
+        questionObj.options.forEach((option) => {
+            const optionElement = document.createElement('span');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Append the options container to the popup content
+        content.appendChild(optionsContainer);
+
+        // Show the popup
+        document.getElementById("popup").style.display = "flex";
 
         // Set currentCell to the clicked cell for clearing later
         currentCell = cell;
