@@ -24,11 +24,11 @@
         <thead>
             <tr>
                 <th>Quran</th>
-<th>Tawheed</th>
-<th>Nabuwat</th>
-<th>Imamat</th>
-<th>Mahdaviyat</th>
-<th>Maad</th>
+                <th>Tawheed</th>
+                <th>Nabuwat</th>
+                <th>Imamat</th>
+                <th>Mahdaviyat</th>
+                <th>Maad</th>
 
             </tr>
         </thead>
@@ -50,53 +50,296 @@
 </div>
 
 <script>
-    const topics = [400, 800, 1200, 1600, 2000];
+const topics = [400, 800, 1200, 1600, 2000];
 const topicNames = ["Quran", "Tawheed", "Nabuwat", "Imamat", "Mahdaviyat", "Maad"]; // Define topic names
 
 // Questions for each topic, 5 questions per topic
 const questions = [
     [
-        "What are the core principles of Tauheed?",  // Question for 400
-        "How does Tauheed influence Muslim spirituality?", // Question for 800
-        "What are the practical implications of Tauheed in daily life?", // Question for 1200
-        "What is the relationship between Tauheed and ethics?", // Question for 1600
-        "How do different Islamic schools interpret Tauheed?" // Question for 2000
+        {
+            "question": "As per traditions: The bearers of the Quran are among the people of ________",
+            "options": [
+                "World",
+                "Hell",
+                "Heaven",
+                "Sky"
+            ]
+        },
+        {
+            "question": "Recitation of Holy Quran is similar to what?",
+            "options": [
+                "Speaking with Allah (s.w.t.)",
+                "Speaking with Aimmah (a.s.)",
+                "Speaking to Angels",
+                "None of the Above"
+            ]
+        },
+        {
+            "question": "According to Imam Sadiq (a.s.), How many verses of the Holy Quran should be recited daily by a Muslim",
+            "options": [
+                "25",
+                "50",
+                "75",
+                "100"
+            ]
+        },
+        {
+            "question": "Imam Ali (a.s.) said: The best among you is the one who ________ the Quran",
+            "options": [
+                "Learns and Memorises",
+                "Memorises and Acts upon",
+                "Learns and Teaches",
+                "Teaches and Acts upon"
+            ]
+        },
+        {
+            "question": "\"The best among you is the one who acquires the knowledge of the Quran\" - Who said this tradition",
+            "options": [
+                "Holy Prophet (s.a.w.a.)",
+                "Imam Ali (a.s.)",
+                "Janabe Zehra (s.a.)",
+                "Imam e Zamana (a.t.f.s.)"
+            ]
+        }
     ],
     [
-        "How does the concept of Adl manifest in Islamic teachings?", // Question for 400
-        "In what ways is Adl important for justice in society?", // Question for 800
-        "What role does Adl play in conflict resolution?", // Question for 1200
-        "Can you describe instances of Adl in Islamic history?", // Question for 1600
-        "What impact does Adl have on personal moral conduct?" // Question for 2000
+        {
+            "question": "According to Traditions: Islam is a religion of awareness and _______",
+            "options": [
+                "Following",
+                "Knowledge",
+                "Truth",
+                "Logic"
+            ]
+        },
+        {
+            "question": "There is no taqleed in",
+            "options": [
+                "Usool e Deen",
+                "Furu e Deen",
+                "Usool e Fiqh",
+                "Furu e Fiqh"
+            ]
+        },
+        {
+            "question": "According to Imam Sadiq (a.s.), Allah (s.w.t.) has created us from _______",
+            "options": [
+                "Water",
+                "Mud",
+                "Nothing",
+                "Noor"
+            ]
+        },
+        {
+            "question": "Abdul Kareem ibne Abil Awja was a ______",
+            "options": [
+                "Jew",
+                "Christian",
+                "Muslim",
+                "Atheist"
+            ]
+        },
+        {
+            "question": "Which servant of Allah (s.w.t.) can speak about the divine attributes",
+            "options": [
+                "Chosen",
+                "Selected",
+                "Appointed",
+                "All of the Above"
+            ]
+        }
+    ],
+
+    [
+        {
+            "question": "Which Arab clan was restricting its tribesman from listening to Holy Quran",
+            "options": [
+                "Quraysh",
+                "Khazraj",
+                "Aws",
+                "Thaqif"
+            ]
+        },
+        {
+            "question": "What was the age of Holy Prophet (s.a.w.a.) when he announced his Prophethood",
+            "options": [
+                "20 years",
+                "30 years",
+                "40 years",
+                "50 years"
+            ]
+        },
+        {
+            "question": "Which Angle used to behave like a servant to Holy Prophet (s.a.w.a.)",
+            "options": [
+                "Hazrat Mikaeel (a.s.)",
+                "Hazrat Jibraeel (a.s.)",
+                "Hazrat e Fitrus (a.s.)",
+                "None of the Above"
+            ]
+        },
+        {
+            "question": "The Quran replied to the Meccans about the Heirs of the Holy Prophet (s.a.w.a.) in which surah",
+            "options": [
+                "Surah Ibrahim",
+                "Surah Baqarah",
+                "Surah Nisa",
+                "Surah Yaseen"
+            ]
+        },
+        {
+            "question": "Name the Author of the book Elalush-Sharaae?",
+            "options": [
+                "Shaikh e Saduq (a.r.)",
+                "Shaikh al Mufeed (a.r.)",
+                "Shaikh Murtaza (a.r.)",
+                "Shaikh e Tusi (a.r.)"
+            ]
+        }
+    ],
+
+    [
+        {
+            "question": "The incident of Ghadeer took place at which location",
+            "options": [
+                "Johfa",
+                "Mecca",
+                "Madina",
+                "Kufa"
+            ]
+        },
+        {
+            "question": "When an Imam (a.s.) announces his successor, it is known as what?",
+            "options": [
+                "Shura",
+                "Sakifa",
+                "Nass",
+                "Ijmaa"
+            ]
+        },
+        {
+            "question": "What does 'Al-Imamat' mean in Islamic terminology?",
+            "options": [
+                "To succeed",
+                "To lead",
+                "To pray",
+                "To guide"
+            ]
+        },
+        {
+            "question": "In the Islamic leadership system, who has the ultimate authority?",
+            "options": [
+                "Caliph",
+                "Imam (a.s.)",
+                "Holy Prophet (s.a.w.a.)",
+                "Allah (s.w.t.)"
+            ]
+        },
+        {
+            "question": "At which occasion did Holy Prophet (s.a.w.a.) 1st proclaim Ali (a.s.) as his successor?",
+            "options": [
+                "Ghadeer e Khum",
+                "Dawat e Zulasheera",
+                "At Mubahilaa",
+                "In Shura"
+            ]
+        }
     ],
     [
-        "What is the significance of Nabuwat in Islam?", // Question for 400
-        "What are the characteristics of the Prophets recognized in Islam?", // Question for 800
-        "How does the concept of Nabuwat influence Islamic law?", // Question for 1200
-        "What challenges did the Prophets face in their missions?", // Question for 1600
-        "How does belief in Nabuwat shape a Muslim's faith?" // Question for 2000
+        {
+            "question": "Name the 1st special deputy (Nayab-e-Khaas) of Imam-e-Zamana (a.t.f.s)",
+            "options": [
+                "Abul Qasim Husain b. Rauh al-Nawbakhti (a.r.)",
+                "Abul Ali b. Muhammad al-Seymouri",
+                "Abu Amr Usman b. Saeed al-Amri (a.r.)",
+                "Abu Jafar Mohammad b. Usman b. Saeed al-Amri (a.r.)"
+            ]
+        },
+        {
+            "question": "The secretive birth of Imam Mahdi (a.t.f.s.) is similar to which Prophet (a.s.)",
+            "options": [
+                "Janabe Ibrahim (a.s.)",
+                "Janabe Nooh (a.s.)",
+                "Janabe Yusuf (a.s.)",
+                "Janabe Yaqoob (a.s.)"
+            ]
+        },
+        {
+            "question": "In the Book, \"Muntakhabul Asaar\" approx. how many traditions are mentioned regarding Imam e Zamana (a.t.f.s.)",
+            "options": [
+                "5,000",
+                "10,000",
+                "15,000",
+                "None"
+            ]
+        },
+        {
+            "question": "Name the angel who took Imam e Zamana (a.t.f.s.) to the skies after his Birth",
+            "options": [
+                "Janabe Jibraeel (a.s.)",
+                "Janabe Fitrus (a.s.)",
+                "Janabe Mikaeel (a.s.)",
+                "Janabe Roohul Qudus (a.s.)"
+            ]
+        },
+        {
+            "question": "Due to the prayers of people of Bani Israeel, Allah (s.w.t.) reduced their punishment by how many years?",
+            "options": [
+                "70",
+                "100",
+                "170",
+                "200"
+            ]
+        }
     ],
     [
-        "What are the key features of Imamat?", // Question for 400
-        "How does Imamat contribute to community leadership?", // Question for 800
-        "What qualities should an Imam possess?", // Question for 1200
-        "In what ways can Imamat be seen in contemporary Islamic societies?", // Question for 1600
-        "How does one determine the legitimacy of an Imam?" // Question for 2000
-    ],
-    [
-        "What is the essence of Mehdaviyat in Islamic belief?", // Question for 400
-        "Who is recognized as the Mahdi in Islamic theology?", // Question for 800
-        "What events are foretold to occur during the Mahdi's appearance?", // Question for 1200
-        "How does Mehdaviyat influence the hopes of Muslims?", // Question for 1600
-        "What is the importance of awaiting the Mahdi in Islam?" // Question for 2000
-    ],
-    [
-        "What does Qayamat represent in Islamic eschatology?", // Question for 400
-        "What signs are associated with the approach of Qayamat?", // Question for 800
-        "How do different interpretations of Qayamat exist among cultures?", // Question for 1200
-        "What guidance does the Quran provide regarding Qayamat?", // Question for 1600
-        "How does the belief in Qayamat affect ethical behavior in Muslims?" // Question for 2000
+        {
+            "question": "Which Surah in the Holy Quran does not have reference to Qiyamat",
+            "options": [
+                "Surah Baqarah",
+                "Surah Yusuf",
+                "Surah Al - A'raf",
+                "Surah Maryam"
+            ]
+        },
+        {
+            "question": "Qiyamat will be in what form",
+            "options": [
+                "In Materialistic form",
+                "In Spiritual form",
+                "In Physical form",
+                "None of the above"
+            ]
+        },
+        {
+            "question": "Belief in the Qiyamat is inherent in ________",
+            "options": [
+                "Spirit (rooh)",
+                "Intellect (Aql)",
+                "Human Nature (Fitrat)",
+                "All of the above"
+            ]
+        },
+        {
+            "question": "In Surah Baqarah, which Prophet is involved in the event of birds coming back to life?",
+            "options": [
+                "Prophet Moosa (a.s.)",
+                "Prophet Dawood (a.s.)",
+                "Prophet Isa (a.s.)",
+                "Prophet Ibrahim (a.s.)"
+            ]
+        },
+        {
+            "question": "According to traditions, what keeps a person away from transgression?",
+            "options": [
+                "Belief in Imamat",
+                "Belief in Qiyamat",
+                "Belief in Tauheed",
+                "Belief in Nabuwat"
+            ]
+        }
     ]
+
 ];
 
 
@@ -120,17 +363,34 @@ const questions = [
         }
     }
 
-    let currentCell = null;
-
-    function showPopup(topicName, point, question, cell) {
+    // Function to show the popup with question and options
+    function showPopup(topicName, point, questionObj, cell) {
         // Update the popup content
         const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
-        document.getElementById("popup").style.display = "flex"; // Show the popup
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+
+        // Create a container for options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('options-container');
+
+        // Display options as span elements
+        questionObj.options.forEach((option) => {
+            const optionElement = document.createElement('span');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Append the options container to the popup content
+        content.appendChild(optionsContainer);
+
+        // Show the popup
+        document.getElementById("popup").style.display = "flex";
 
         // Set currentCell to the clicked cell for clearing later
         currentCell = cell;
     }
+
 
     function closePopup() {
         if (currentCell) {

@@ -12,7 +12,7 @@ body, html {
     align-items: center;     /* Horizontally center */
     height: 100vh;          /* Full viewport height */
     position: relative;
-    
+    padding-top: 3rem;
 }
 .container > *{
     z-index: 2;
@@ -36,10 +36,10 @@ body, html {
     position: absolute;
     left: 0;
     right: 0;
-    top: 3%;
+    top: 0;
     bottom: 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: top;
     opacity: 0.5;
 }
@@ -267,7 +267,7 @@ footer img{
 }
 
 .option {
-    font-size: 20px;
+    font-size: 2rem;
     cursor: pointer;
     padding: 6px 12px;
     background-color: rgb(130 62 24);

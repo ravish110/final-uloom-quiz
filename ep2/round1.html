@@ -55,48 +55,294 @@
 
     // Questions for each topic, 5 questions per topic
     const questions = [
-        [
-            "What is the significance of Tauheed?",  // Question for 200
-            "How does Tauheed impact daily life?",   // Question for 400
-            "What are the different forms of Tauheed?", // Question for 600
-            "How can one strengthen their Tauheed?",   // Question for 800
-            "What are common misconceptions about Tauheed?" // Question for 1000
-        ],
-        [
-            "What is the concept of Adl in Islam?", // Question for 200
-            "Why is Adl important in society?",      // Question for 400
-            "How is Adl reflected in Islamic law?",  // Question for 600
-            "Can you give examples of Adl from Islamic history?", // Question for 800
-            "What role does Adl play in personal conduct?" // Question for 1000
-        ],
-        [
-            "What is the role of Nabuwat?",          // Question for 200
-            "How many Prophets are recognized in Islam?", // Question for 400
-            "What are the qualities of a Prophet?",   // Question for 600
-            "How do Prophets communicate with God?",  // Question for 800
-            "Why is belief in Prophets essential for Muslims?" // Question for 1000
-        ],
-        [
-            "What is Imamat?",                        // Question for 200
-            "How does Imamat differ from Nabuwat?",   // Question for 400
-            "What are the characteristics of an Imam?", // Question for 600
-            "What is the role of Imams in the community?", // Question for 800
-            "How does one choose an Imam?"           // Question for 1000
-        ],
-        [
-            "What is Mehdaviyat?",                    // Question for 200
-            "Who is the Mahdi in Islamic eschatology?", // Question for 400
-            "What signs are associated with the appearance of the Mahdi?", // Question for 600
-            "How does Mehdaviyat influence Muslim beliefs?", // Question for 800
-            "What is the significance of waiting for the Mahdi?" // Question for 1000
-        ],
-        [
-            "What is the concept of Qayamat?",        // Question for 200
-            "What events are expected to occur on Qayamat?", // Question for 400
-            "How do different cultures view the end of the world?", // Question for 600
-            "What does the Quran say about Qayamat?", // Question for 800
-            "How does belief in Qayamat affect a Muslim's life?" // Question for 1000
+
+    [
+    {
+        "question": "It is ________ for every believing man and woman to get acquainted with the teachings of the Holy Quran",
+        "options": [
+            "Wajib",
+            "Mustahab",
+            "Mubaah",
+            "Maqrooh"
         ]
+    },
+    {
+        "question": "If a person recites the Holy Quran, without _________, Allah (s.w.t.) will raise him blind on the day of Qiyamat",
+        "options": [
+            "Wuzu",
+            "Cap (topi)",
+            "Practice (Amal)",
+            "Bismillah"
+        ]
+    },
+    {
+        "question": "While reciting Holy Quran, if an ayat mentions heaven and hell, what should a person do",
+        "options": [
+            "Recite it loudly",
+            "Recite it slow",
+            "Do Sajadah",
+            "Pray to Allah"
+        ]
+    },
+    {
+        "question": "Holy Prophet (s.a.w.a.) will complain: O Lord, my Ummah (followers) have __________ the Quran.",
+        "options": [
+            "Forgotten",
+            "Abandoned",
+            "Changed",
+            "Lost"
+        ]
+    },
+    {
+        "question": "Holy Prophet (s.a.w.a.) said: The one who respects the Quran, has respected _______",
+        "options": [
+            "Allah (s.w.t.)",
+            "Ahle Bait (a.s.)",
+            "Ambiya (a.s.)",
+            "Religion"
+        ]
+    }
+],
+
+[
+    {
+        "question": "Frequent remembrance of Allah (s.w.t.) increases the ________",
+        "options": [
+            "Sustenance",
+            "Virtues",
+            "Wealth",
+            "Ibadaat"
+        ]
+    },
+    {
+        "question": "Love of Ahle Bait (a.s.) is the foundation of _________",
+        "options": [
+            "Faith",
+            "Prayers",
+            "Tawheed",
+            "Adl"
+        ]
+    },
+    {
+        "question": "According to traditions, Why has Allah (s.w.t) granted a lofty and elevated status to the tongue?",
+        "options": [
+            "It proclaims Tawheed",
+            "Recites Holy Quran",
+            "Recites Salawat",
+            "All the Above"
+        ]
+    },
+    {
+        "question": "Allah has instilled His true recognition (Tauheed) in everyone’s",
+        "options": [
+            "Heart",
+            "Brain",
+            "Faith",
+            "Nature"
+        ]
+    },
+    {
+        "question": "Every Muslim should accept his beliefs in the light of reason and _______",
+        "options": [
+            "Logic",
+            "Intellect",
+            "Proof",
+            "Books"
+        ]
+    }
+],
+
+[
+    {
+        "question": "According to Quran guidance is upon_______",
+        "options": [
+            "The Person",
+            "Imam (a.s.)",
+            "The Prophet (a.s.)",
+            "Allah (s.w.t.)"
+        ]
+    },
+    {
+        "question": "Ehtemaam e Hujjat means making it clear to the people as to what is",
+        "options": [
+            "Wajib & Haram",
+            "Only Wajib",
+            "Only Haram",
+            "None of the Above"
+        ]
+    },
+    {
+        "question": "Sending of the Prophets and Messengers would help people to achieve Aim of _________ ?",
+        "options": [
+            "Allah (s.w.t.)",
+            "Creation",
+            "Holy Prophet (s.a.w.a.)",
+            "The Imam (a.s.)"
+        ]
+    },
+    {
+        "question": "True Prophet should have some exclusive ___________in order to differentiate them from false claimants",
+        "options": [
+            "Aqlaq",
+            "Personality",
+            "Characteristics",
+            "Nature"
+        ]
+    },
+    {
+        "question": "The Shariat of Hazrat Nooh (a.s) was valid till it was abrogated by the Shariat of which Prophet (a.s.)",
+        "options": [
+            "Hazrat Isa (a.s.)",
+            "Hazrat Ibrahim (a.s.)",
+            "Hazrat Moosa (a.s.)",
+            "Hazrat Yusuf (a.s.)"
+        ]
+    }
+],
+[
+    {
+        "question": "According to the Shia's, Who is the 'Imam'?",
+        "options": [
+            "One who leads Namaz",
+            "Scholar of Islamic law",
+            "Holy Prophet (s.a.w.a.) successor",
+            "A Pious Person"
+        ]
+    },
+    {
+        "question": "According to a tradition, how many sects will Islam split into?",
+        "options": [
+            "70",
+            "71",
+            "72",
+            "73"
+        ]
+    },
+    {
+        "question": "What is a key responsibility of an Imam (a.s.) in succession to the Prophet (s.a.w.a.)?",
+        "options": [
+            "Lead Prayers",
+            "Appoint the next Imam (a.s.)",
+            "Hold complete Authority",
+            "Teach Holy Quran"
+        ]
+    },
+    {
+        "question": "According to Islam, who is responsible for making laws?",
+        "options": [
+            "Allah (s.w.t.)",
+            "Holy Prophet (s.a.w.a.)",
+            "Imam (a.s.)",
+            "People"
+        ]
+    },
+    {
+        "question": "Which quality must an Imam possess to ensure he does not mislead others?",
+        "options": [
+            "Miracle",
+            "Wealth",
+            "Infallibility",
+            "Power"
+        ]
+    }
+],
+
+[
+    {
+        "question": "On who's order is Imam Mahdi (a.t.f.s.) in Ghaibat?",
+        "options": [
+            "Holy Prophet (s.a.w.a.)",
+            "Imam Ali (a.s.)",
+            "Allah (s.w.t.)",
+            "None of the above"
+        ]
+    },
+    {
+        "question": "The Ghaibat of Imam e Zamana (a.t.f.s.) is a ______ for the people",
+        "options": [
+            "Examination",
+            "Calamity",
+            "Blessing",
+            "Punishment"
+        ]
+    },
+    {
+        "question": "According to traditions: At the time of Zuhoor, Imam Mahdi (a.t.f.s.) will look like a person of ____ years",
+        "options": [
+            "20",
+            "40",
+            "60",
+            "80"
+        ]
+    },
+    {
+        "question": "On the day of Qiyamat, every person will be raised with his ______",
+        "options": [
+            "Father",
+            "Mother",
+            "Prophet (a.s.)",
+            "Imam (a.s.)"
+        ]
+    },
+    {
+        "question": "Who are the people who believe in the unseen?",
+        "options": [
+            "Momeneen",
+            "Muttakeen",
+            "Parezgaar",
+            "None of the above"
+        ]
+    }
+],
+[
+    {
+        "question": "What phenomenon is used as a proof that the soul is non-materialistic?",
+        "options": [
+            "Dreaming",
+            "Walking in sleep",
+            "Talking in sleep",
+            "None of the above"
+        ]
+    },
+    {
+        "question": "What do wise people shine like according to the Torah?",
+        "options": [
+            "Stars",
+            "The sun",
+            "The moon",
+            "The earth"
+        ]
+    },
+    {
+        "question": "Which belief has the second highest number of verses in the Quran after Tauheed?",
+        "options": [
+            "Namaz",
+            "Hajj",
+            "Qiyamat",
+            "Charity"
+        ]
+    },
+    {
+        "question": "Which Prophet's experience with a decayed bone is used as proof of Qiyamat in Surah Yasin?",
+        "options": [
+            "Prophet Moosa (a.s.)",
+            "Prophet Nooh (a.s.)",
+            "Prophet Ibrahim (a.s.)",
+            "Prophet Muhammed (s.a.w.a.)"
+        ]
+    },
+    {
+        "question": "What phrase does Hazrat Isa (a.s.) use to refer to God in the Bible?",
+        "options": [
+            "God of the dead",
+            "God of the living",
+            "God of knowledge",
+            "God of creation"
+        ]
+    }
+]
+
+
     ];
 
     function generateTableRows() {
@@ -119,17 +365,34 @@
         }
     }
 
-    let currentCell = null;
-
-    function showPopup(topicName, point, question, cell) {
+        // Function to show the popup with question and options
+        function showPopup(topicName, point, questionObj, cell) {
         // Update the popup content
         const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
-        document.getElementById("popup").style.display = "flex"; // Show the popup
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+
+        // Create a container for options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('options-container');
+
+        // Display options as span elements
+        questionObj.options.forEach((option) => {
+            const optionElement = document.createElement('span');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Append the options container to the popup content
+        content.appendChild(optionsContainer);
+
+        // Show the popup
+        document.getElementById("popup").style.display = "flex";
 
         // Set currentCell to the clicked cell for clearing later
         currentCell = cell;
     }
+
 
     function closePopup() {
         if (currentCell) {
