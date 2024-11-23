@@ -54,48 +54,288 @@
 
     // Questions for each topic, 5 questions per topic
     const questions = [
-        [
-            "What is the significance of Tauheed?",  // Question for 200
-            "How does Tauheed impact daily life?",   // Question for 400
-            "What are the different forms of Tauheed?", // Question for 600
-            "How can one strengthen their Tauheed?",   // Question for 800
-            "What are common misconceptions about Tauheed?" // Question for 1000
-        ],
-        [
-            "What is the concept of Adl in Islam?", // Question for 200
-            "Why is Adl important in society?",      // Question for 400
-            "How is Adl reflected in Islamic law?",  // Question for 600
-            "Can you give examples of Adl from Islamic history?", // Question for 800
-            "What role does Adl play in personal conduct?" // Question for 1000
-        ],
-        [
-            "What is the role of Nabuwat?",          // Question for 200
-            "How many Prophets are recognized in Islam?", // Question for 400
-            "What are the qualities of a Prophet?",   // Question for 600
-            "How do Prophets communicate with God?",  // Question for 800
-            "Why is belief in Prophets essential for Muslims?" // Question for 1000
-        ],
-        [
-            "What is Imamat?",                        // Question for 200
-            "How does Imamat differ from Nabuwat?",   // Question for 400
-            "What are the characteristics of an Imam?", // Question for 600
-            "What is the role of Imams in the community?", // Question for 800
-            "How does one choose an Imam?"           // Question for 1000
-        ],
-        [
-            "What is Mehdaviyat?",                    // Question for 200
-            "Who is the Mahdi in Islamic eschatology?", // Question for 400
-            "What signs are associated with the appearance of the Mahdi?", // Question for 600
-            "How does Mehdaviyat influence Muslim beliefs?", // Question for 800
-            "What is the significance of waiting for the Mahdi?" // Question for 1000
-        ],
-        [
-            "What is the concept of Qayamat?",        // Question for 200
-            "What events are expected to occur on Qayamat?", // Question for 400
-            "How do different cultures view the end of the world?", // Question for 600
-            "What does the Quran say about Qayamat?", // Question for 800
-            "How does belief in Qayamat affect a Muslim's life?" // Question for 1000
-        ]
+    [
+        {
+            "question": "What is the ideal manner of reciting Quran?",
+            "options": [
+                "Fast",
+                "Hastily",
+                "Clearly",
+                "Slowly"
+            ]
+        },
+        {
+            "question": "What is an excellent way to strengthen memory?",
+            "options": [
+                "Reading Quran",
+                "Listening Quran",
+                "Memorise Quran",
+                "All of the above"
+            ]
+        },
+        {
+            "question": "Hazrat Ali (a.s.) said: Know that there is no news in recitation (of Quran), if __________ is not included.",
+            "options": [
+                "Reflection (Tadabbur)",
+                "Prayer (Dua)",
+                "Knowledge (Ilm)",
+                "Recitation (Tilawat)"
+            ]
+        },
+        {
+            "question": "Imam Sadiq (AS) said, \"Close the doors to sins through seeking refuge (in Allah), and open the doors to obedience with _________.\"",
+            "options": [
+                "Quran",
+                "Bismillah",
+                "Touba",
+                "None of the Above"
+            ]
+        },
+        {
+            "question": "\"Learn Arabic, for indeed it is the word of Allah (s.w.t.) in which He has communicated with His creation\" This tradition is from which Imam (a.s.)",
+            "options": [
+                "Imam Ali (a.s.)",
+                "Imam Hussain (a.s.)",
+                "Imam Sadiq (a.s.)",
+                "Imam Ali Naqi (a.s.)"
+            ]
+        }
+    ],
+    [
+        {
+            "question": "As per Surah Munafiqoon, Ayat # 9 Let not your wealth, or your children _______ you from the remembrance of Allah (s.w.t.)",
+            "options": [
+                "Guide",
+                "Help",
+                "Advise",
+                "Divert"
+            ]
+        },
+        {
+            "question": "Remembrance of ________ is the best remedy to get salvation from all difficulties and problems",
+            "options": [
+                "Allah (s.w.t.)",
+                "Holy Prophet (s.a.w.a.)",
+                "Imam Ali (a.s.)",
+                "Imam e Zamana (a.t.f.s)"
+            ]
+        },
+        {
+            "question": "The love of _______ is the greatest right of 'لَا إِلَٰهَ إِلَّا اللهُ'",
+            "options": [
+                "Parents",
+                "Holy Prophet (s.a.w.a.)",
+                "Ahle Bait (a.s.)",
+                "Allah (s.w.t.)"
+            ]
+        },
+        {
+            "question": "As per traditions: Allah (s.w.t.) does not accept any action that is not accompanied with __________",
+            "options": [
+                "Research",
+                "Recognition",
+                "Proof",
+                "None of the above"
+            ]
+        },
+        {
+            "question": "As per Surah Hashr, Ayat 19 Those who _______ Allah (s.w.t.) are Transgressors",
+            "options": [
+                "Believe",
+                "Forsake",
+                "Pray to",
+                "Love"
+            ]
+        }
+    ],
+    [
+        {
+            "question": "Which Prophet (a.s.) is alive and in occultation?",
+            "options": [
+                "Hazrat Adam (a.s.)",
+                "Hazrat Dawood (a.s.)",
+                "Hazrat Ibrahim (a.s.)",
+                "Hazrat Khizr (a.s.)"
+            ]
+        },
+        {
+            "question": "What is the name of the adopted son of the Holy Prophet (s.a.w.a.)?",
+            "options": [
+                "Abu Zarr e Gaffari",
+                "Ibrahim ibn Zaid",
+                "Zaid ibn Harris",
+                "Ishaq e Kalbi"
+            ]
+        },
+        {
+            "question": "How many people knew the art of reading and writing in Mecca before advent of Islam?",
+            "options": [
+                "17",
+                "27",
+                "37",
+                "57"
+            ]
+        },
+        {
+            "question": "Prior to Islam what was the belief of the people of Mecca?",
+            "options": [
+                "Polytheists",
+                "Monotheists",
+                "Christianity",
+                "Judaism"
+            ]
+        },
+        {
+            "question": "Holy Prophet (s.a.w.s.) was born in the city of Mecca in which century?",
+            "options": [
+                "1st Century",
+                "3rd Century",
+                "6th Century",
+                "9th Century"
+            ]
+        }
+    ],
+    [
+        {
+            "question": "What does the term 'Imamat' signify in Islamic terminology?",
+            "options": [
+                "Authority in All Affairs",
+                "Authority in Worldly Affairs",
+                "Authority in Religious Affairs",
+                "Authority in Namaz"
+            ]
+        },
+        {
+            "question": "Which is one of the signs of recognising a true Imam (a.s.)?",
+            "options": [
+                "Wealth",
+                "Courageous",
+                "Strength",
+                "Miracles"
+            ]
+        },
+        {
+            "question": "In Surah Al Qasas, Ayat # 68, 'And your Lord creates and chooses whom He pleases; to choose is not theirs' - This Ayat is in reference to which Belief in Islam?",
+            "options": [
+                "Tauheed",
+                "Imamat",
+                "Qiyamat",
+                "Mahdaviyat"
+            ]
+        },
+        {
+            "question": "In the Quranic verse of 'Mubaahilah', who is referred to as the 'Self' of Prophet Muhammad (s.a.w.a.)?",
+            "options": [
+                "Imam Hasan a.s.",
+                "Imam Husain a.s.",
+                "Hazrat Ali (a.s.)",
+                "Hazrat Fatema (s.a.)"
+            ]
+        },
+        {
+            "question": "What does 'Al-Wisaya' mean in Islamic terminology?",
+            "options": [
+                "Religious Teacher",
+                "Executor of Will",
+                "Army Commander",
+                "None of the above"
+            ]
+        }
+    ],
+    [
+        {
+            "question": "Love of Imam Mahdi (a.t.f.s.) has been ordered by whom?",
+            "options": [
+                "Holy Prophet (s.a.w.a.)",
+                "Imam Ali (a.s.)",
+                "Imam Hussain (a.s.)",
+                "Allah (s.w.t.)"
+            ]
+        },
+        {
+            "question": "According to tradition, what is the best action for the people (Ummat) of Holy Prophet (s.a.w.a.)?",
+            "options": [
+                "Going for Hajj Pilgrimage",
+                "Ziyarat of Imam Hussain (a.s.)",
+                "Awaiting the Zuhoor of Imam Mahdi (a.t.f.s.)",
+                "None of the above"
+            ]
+        },
+        {
+            "question": "Which Imam (a.s.) received Imamat at an early age?",
+            "options": [
+                "Imam Hussain (a.s.)",
+                "Imam Ali Naqi (a.s.)",
+                "Imam Sadiq (a.s.)",
+                "Imam Hasan Askari (a.s.)"
+            ]
+        },
+        {
+            "question": "Name the 2nd special deputy (Nayab-e-Khaas) of Imam-e-Zamana (a.t.f.s)",
+            "options": [
+                "Abul Qasim Husain b. Rauh al-Nawbakhti (a.r.)",
+                "Abul Ali b. Muhammad al-Seymouri",
+                "Abu Amr Usman b. Saeed al-Amri (a.r.)",
+                "Abu Jafar Mohammad b. Usman b. Saeed al-Amri (a.r.)"
+            ]
+        },
+        {
+            "question": "What does the title 'Al Mahdi' mean?",
+            "options": [
+                "Guided One",
+                "Last Proof of Allah",
+                "Master of Affairs",
+                "Master of Time"
+            ]
+        }
+    ],
+    [
+        {
+            "question": "In ancient Egypt, what provisions did they bury with the dead?",
+            "options": [
+                "Jewelry and Gold",
+                "Food and provisions",
+                "Clothes & Weapons",
+                "None of the Above"
+            ]
+        },
+        {
+            "question": "Heaven exist as what?",
+            "options": [
+                "Spirit (Rooh)",
+                "Fire (Aagh)",
+                "Material (Maddi)",
+                "None of the Above"
+            ]
+        },
+        {
+            "question": "According to non-materialists, how long does it take for the human cells to completely change?",
+            "options": [
+                "5 years.",
+                "7 years.",
+                "10 years.",
+                "12 years."
+            ]
+        },
+        {
+            "question": "According to traditions: Who is 'Siraat' in this world?",
+            "options": [
+                "Allah (s.w.t.)",
+                "Holy Prophet (s.a.w.a.)",
+                "The Imam of the time",
+                "All of the above"
+            ]
+        },
+        {
+            "question": "In which Surah is the comparison of Qiyamat with the enlivening of the earth by rain found?",
+            "options": [
+                "Surah Hajj",
+                "Surah Baqarah",
+                "Surah Yasin",
+                "Surah Nisa"
+            ]
+        }
+    ]
     ];
 
     function generateTableRows() {
@@ -118,13 +358,29 @@
         }
     }
 
-    let currentCell = null;
-
-    function showPopup(topicName, point, question, cell) {
+    // Function to show the popup with question and options
+    function showPopup(topicName, point, questionObj, cell) {
         // Update the popup content
         const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
-        document.getElementById("popup").style.display = "flex"; // Show the popup
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+
+        // Create a container for options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('options-container');
+
+        // Display options as span elements
+        questionObj.options.forEach((option) => {
+            const optionElement = document.createElement('span');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Append the options container to the popup content
+        content.appendChild(optionsContainer);
+
+        // Show the popup
+        document.getElementById("popup").style.display = "flex";
 
         // Set currentCell to the clicked cell for clearing later
         currentCell = cell;
