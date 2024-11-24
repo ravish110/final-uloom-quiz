@@ -24,12 +24,11 @@
         <thead>
             <tr>
                 <th>Quran</th>
-<th>Tawheed</th>
-<th>Nabuwat</th>
-<th>Imamat</th>
-<th>Mahdaviyat</th>
-<th>Maad</th>
-
+                <th>Tawheed</th>
+                <th>Nabuwat</th>
+                <th>Imamat</th>
+                <th>Mahdaviyat</th>
+                <th>Maad</th>
             </tr>
         </thead>
         <tbody>
@@ -56,46 +55,286 @@ const topicNames = ["Quran", "Tawheed", "Nabuwat", "Imamat", "Mahdaviyat", "Maad
 // Questions for each topic, 5 questions per topic
 const questions = [
     [
-        "What are the core principles of Tauheed?",  // Question for 400
-        "How does Tauheed influence Muslim spirituality?", // Question for 800
-        "What are the practical implications of Tauheed in daily life?", // Question for 1200
-        "What is the relationship between Tauheed and ethics?", // Question for 1600
-        "How do different Islamic schools interpret Tauheed?" // Question for 2000
+        {
+            "question": "According to Imam Sadiq (a.s.), How many verses of the Holy Quran should be recited daily by a Muslim?",
+            "options": [
+                "25",
+                "50",
+                "75",
+                "100"
+            ]
+        },
+        {
+            "question": "Recitation of Holy Quran is similar to what?",
+            "options": [
+                "Speaking with Allah (s.w.t.)",
+                "Speaking with Aimmah (a.s.)",
+                "Speaking to Angels",
+                "None of the Above"
+            ]
+        },
+        {
+            "question": "\"The best among you is the one who acquires the knowledge of the Quran\" - Who said this tradition?",
+            "options": [
+                "Holy Prophet (s.a.w.a.)",
+                "Imam Ali (a.s.)",
+                "Janabe Zehra (a.s.)",
+                "Imam e Zamana (a.t.f.s.)"
+            ]
+        },
+        {
+            "question": "The adornment (ornament) of the Quran is ________",
+            "options": [
+                "Its Cover",
+                "Its Writing",
+                "Good Voice",
+                "Loud Voice"
+            ]
+        },
+        {
+            "question": "One of the ways of making our memory powerful is to ________________",
+            "options": [
+                "Look at the Quran",
+                "Read the Quran",
+                "Carry the Quran",
+                "Memorise the Quran"
+            ]
+        }
     ],
     [
-        "How does the concept of Adl manifest in Islamic teachings?", // Question for 400
-        "In what ways is Adl important for justice in society?", // Question for 800
-        "What role does Adl play in conflict resolution?", // Question for 1200
-        "Can you describe instances of Adl in Islamic history?", // Question for 1600
-        "What impact does Adl have on personal moral conduct?" // Question for 2000
+        {
+            "question": "According to Traditions: Islam is a religion of awareness and _______",
+            "options": [
+                "Following",
+                "Knowledge",
+                "Truth",
+                "Logic"
+            ]
+        },
+        {
+            "question": "We should seek _______ from Allah (s.w.t.) with utmost sincerity",
+            "options": [
+                "Wealth",
+                "Knowledge",
+                "Money",
+                "Forgiveness"
+            ]
+        },
+        {
+            "question": "According to Imam Sadiq (a.s.), Allah (s.w.t.) has created us from _______",
+            "options": [
+                "Water",
+                "Mud",
+                "Nothing",
+                "Noor"
+            ]
+        },
+        {
+            "question": "There is no taqleed in",
+            "options": [
+                "Usool e Deen",
+                "Furu e Deen",
+                "Usool e Fiqh",
+                "Furu e Fiqh"
+            ]
+        },
+        {
+            "question": "Abdul Kareem ibne Abil Awja was a ______",
+            "options": [
+                "Jew",
+                "Christian",
+                "Muslim",
+                "Atheist"
+            ]
+        }
     ],
     [
-        "What is the significance of Nabuwat in Islam?", // Question for 400
-        "What are the characteristics of the Prophets recognized in Islam?", // Question for 800
-        "How does the concept of Nabuwat influence Islamic law?", // Question for 1200
-        "What challenges did the Prophets face in their missions?", // Question for 1600
-        "How does belief in Nabuwat shape a Muslim's faith?" // Question for 2000
+        {
+            "question": "Quran is the word of ________",
+            "options": [
+                "Angel",
+                "Allah (s.w.t.)",
+                "Human",
+                "Prophet (a.s.)"
+            ]
+        },
+        {
+            "question": "The Quran replied to the Meccans about the Heirs of the Holy Prophet (s.a.w.a.) in which surah",
+            "options": [
+                "Surah Ibrahim",
+                "Surah Baqarah",
+                "Surah Nisa",
+                "Surah Yaseen"
+            ]
+        },
+        {
+            "question": "Which heavenly book was revealed to Hazrat Moosa (a.s.)",
+            "options": [
+                "Torah",
+                "Injeel",
+                "Zuboor",
+                "Quran"
+            ]
+        },
+        {
+            "question": "How many names of Prophets are mentioned in the Holy Quran",
+            "options": [
+                "15",
+                "20",
+                "25",
+                "30"
+            ]
+        },
+        {
+            "question": "Name the Author of the book Elalush-Sharaae?",
+            "options": [
+                "Shaikh Saduq (a.r.)",
+                "Shaikh al Mufeed (a.r.)",
+                "Shaikh Murtaza (a.r.)",
+                "Shaikh e Tusi (a.r.)"
+            ]
+        }
     ],
     [
-        "What are the key features of Imamat?", // Question for 400
-        "How does Imamat contribute to community leadership?", // Question for 800
-        "What qualities should an Imam possess?", // Question for 1200
-        "In what ways can Imamat be seen in contemporary Islamic societies?", // Question for 1600
-        "How does one determine the legitimacy of an Imam?" // Question for 2000
+        {
+            "question": "What does 'Al-Imamat' mean in Islamic terminology?",
+            "options": [
+                "To succeed",
+                "To Guide",
+                "To pray",
+                "To lead"
+            ]
+        },
+        {
+            "question": "In Ayat e Wilayat, what's the meaning of \"Ulil Amr\"",
+            "options": [
+                "Prophets (a.s.)",
+                "Allah (s.w.t.)",
+                "Imam (a.s.)",
+                "None of these"
+            ]
+        },
+        {
+            "question": "Abul Abbas b. Uqdah has narrated the hadith of Ghadeer-e-Khum through how many chain of narrators",
+            "options": [
+                "150",
+                "250",
+                "500",
+                "1000"
+            ]
+        },
+        {
+            "question": "What is the meaning of the word \"Maula\" in Hadith e Ghadeer ?",
+            "options": [
+                "Friend",
+                "Master",
+                "Companion",
+                "Enemy"
+            ]
+        },
+        {
+            "question": "Name the Author of the book Al - Ghadeer",
+            "options": [
+                "Shaikh Al Murtaza",
+                "Shaikh Al Mufeed",
+                "Allama Amini (a.r.)",
+                "None of these"
+            ]
+        }
     ],
     [
-        "What is the essence of Mehdaviyat in Islamic belief?", // Question for 400
-        "Who is recognized as the Mahdi in Islamic theology?", // Question for 800
-        "What events are foretold to occur during the Mahdi's appearance?", // Question for 1200
-        "How does Mehdaviyat influence the hopes of Muslims?", // Question for 1600
-        "What is the importance of awaiting the Mahdi in Islam?" // Question for 2000
+        {
+            "question": "Imam e Zamana (a.t.f.s.) is mentioned in which heavenly book",
+            "options": [
+                "Torah",
+                "Injeel",
+                "Zuboor",
+                "All of these"
+            ]
+        },
+        {
+            "question": "The secretive birth of Imam Mahdi (a.t.f.s.) is similar to which Prophet (a.s.)",
+            "options": [
+                "Hazrat Yusuf (a.s.)",
+                "Hazrat Nooh (a.s.)",
+                "Hazrat Moosa (a.s.)",
+                "Janabe Yaqoob (a.s.)"
+            ]
+        },
+        {
+            "question": "Which city will be the capital / headquarters of Imam e Zamana (a.t.f.s.) after his Zuhoor",
+            "options": [
+                "Najaf",
+                "Kufa",
+                "Samarrah",
+                "Karbala"
+            ]
+        },
+        {
+            "question": "Name the book in which around 80 responsibilities of Shias during Ghaibat e Kubra are mentioned",
+            "options": [
+                "Mikyal al-Makarim",
+                "Al Kafi",
+                "Najmus Saqib",
+                "Behar Al Anwar"
+            ]
+        },
+        {
+            "question": "Due to the prayers of people of Bani Israeel, Allah (s.w.t.) reduced their punishment by how many years?",
+            "options": [
+                "70",
+                "100",
+                "170",
+                "200"
+            ]
+        }
     ],
     [
-        "What does Qayamat represent in Islamic eschatology?", // Question for 400
-        "What signs are associated with the approach of Qayamat?", // Question for 800
-        "How do different interpretations of Qayamat exist among cultures?", // Question for 1200
-        "What guidance does the Quran provide regarding Qayamat?", // Question for 1600
-        "How does the belief in Qayamat affect ethical behavior in Muslims?" // Question for 2000
+        {
+            "question": "Which Surah in the Holy Quran does not have reference to Qiyamat",
+            "options": [
+                "Surah Nisa",
+                "Surah Maidah",
+                "Surah Al - A'raf",
+                "Surah Yusuf"
+            ]
+        },
+        {
+            "question": "Belief in the Qiyamat is inherent in ________",
+            "options": [
+                "Spirit (rooh)",
+                "Human Nature (Fitrat)",
+                "Intellect (Aql)",
+                "All of the above"
+            ]
+        },
+        {
+            "question": "Approximately how many verses in the Quran discuss Qiyamat?",
+            "options": [
+                "500",
+                "1000",
+                "1300",
+                "2500"
+            ]
+        },
+        {
+            "question": "According to non-materialists, how long does it take for the human cells to completely change?",
+            "options": [
+                "5 years.",
+                "7 years.",
+                "10 years.",
+                "12 years."
+            ]
+        },
+        {
+            "question": "What did ancient people believe in regarding life after death?",
+            "options": [
+                "Eternal Sleep",
+                "Reincarnation",
+                "Immortality",
+                "None of these"
+            ]
+        }
     ]
 ];
 
@@ -120,17 +359,34 @@ const questions = [
         }
     }
 
-    let currentCell = null;
-
-    function showPopup(topicName, point, question, cell) {
+    // Function to show the popup with question and options
+    function showPopup(topicName, point, questionObj, cell) {
         // Update the popup content
         const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
-        document.getElementById("popup").style.display = "flex"; // Show the popup
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+
+        // Create a container for options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('options-container');
+
+        // Display options as span elements
+        questionObj.options.forEach((option) => {
+            const optionElement = document.createElement('span');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Append the options container to the popup content
+        content.appendChild(optionsContainer);
+
+        // Show the popup
+        document.getElementById("popup").style.display = "flex";
 
         // Set currentCell to the clicked cell for clearing later
         currentCell = cell;
     }
+
 
     function closePopup() {
         if (currentCell) {

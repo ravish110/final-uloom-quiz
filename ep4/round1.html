@@ -24,12 +24,11 @@
         <thead>
             <tr>
                 <th>Quran</th>
-<th>Tawheed</th>
-<th>Nabuwat</th>
-<th>Imamat</th>
-<th>Mahdaviyat</th>
-<th>Maad</th>
-
+                <th>Tawheed</th>
+                <th>Nabuwat</th>
+                <th>Imamat</th>
+                <th>Mahdaviyat</th>
+                <th>Maad</th>
             </tr>
         </thead>
         <tbody>
@@ -55,48 +54,288 @@
 
     // Questions for each topic, 5 questions per topic
     const questions = [
-        [
-            "What is the significance of Tauheed?",  // Question for 200
-            "How does Tauheed impact daily life?",   // Question for 400
-            "What are the different forms of Tauheed?", // Question for 600
-            "How can one strengthen their Tauheed?",   // Question for 800
-            "What are common misconceptions about Tauheed?" // Question for 1000
-        ],
-        [
-            "What is the concept of Adl in Islam?", // Question for 200
-            "Why is Adl important in society?",      // Question for 400
-            "How is Adl reflected in Islamic law?",  // Question for 600
-            "Can you give examples of Adl from Islamic history?", // Question for 800
-            "What role does Adl play in personal conduct?" // Question for 1000
-        ],
-        [
-            "What is the role of Nabuwat?",          // Question for 200
-            "How many Prophets are recognized in Islam?", // Question for 400
-            "What are the qualities of a Prophet?",   // Question for 600
-            "How do Prophets communicate with God?",  // Question for 800
-            "Why is belief in Prophets essential for Muslims?" // Question for 1000
-        ],
-        [
-            "What is Imamat?",                        // Question for 200
-            "How does Imamat differ from Nabuwat?",   // Question for 400
-            "What are the characteristics of an Imam?", // Question for 600
-            "What is the role of Imams in the community?", // Question for 800
-            "How does one choose an Imam?"           // Question for 1000
-        ],
-        [
-            "What is Mehdaviyat?",                    // Question for 200
-            "Who is the Mahdi in Islamic eschatology?", // Question for 400
-            "What signs are associated with the appearance of the Mahdi?", // Question for 600
-            "How does Mehdaviyat influence Muslim beliefs?", // Question for 800
-            "What is the significance of waiting for the Mahdi?" // Question for 1000
-        ],
-        [
-            "What is the concept of Qayamat?",        // Question for 200
-            "What events are expected to occur on Qayamat?", // Question for 400
-            "How do different cultures view the end of the world?", // Question for 600
-            "What does the Quran say about Qayamat?", // Question for 800
-            "How does belief in Qayamat affect a Muslim's life?" // Question for 1000
+    [
+    {
+        "question": "While reciting Holy Quran, if an ayat mentions heaven and hell, what should a person do?",
+        "options": [
+            "Recite it loudly",
+            "Recite it slow",
+            "Do Sajadah",
+            "Pray to Allah"
         ]
+    },
+    {
+        "question": "Holy Prophet (s.a.w.a.) said: The one who respects the Quran, has respected _______",
+        "options": [
+            "Allah (s.w.t.)",
+            "Ahle Bait (a.s.)",
+            "Ambiya (a.s.)",
+            "Religion"
+        ]
+    },
+    {
+        "question": "How should a person recite the Holy Quran?",
+        "options": [
+            "Fast",
+            "Slowly",
+            "Very Fast",
+            "None of the Above"
+        ]
+    },
+    {
+        "question": "Holy Prophet (s.a.w.a.) will complain: O Lord, my Ummah (followers) have __________ the Quran.",
+        "options": [
+            "Forgotten",
+            "Abandoned",
+            "Changed",
+            "Lost"
+        ]
+    },
+    {
+        "question": "Imam Ali (a.s.) said: The best among you is the one who ________ the Quran",
+        "options": [
+            "Learns and Memorises",
+            "Memorises and Acts upon",
+            "Learns and Teaches",
+            "Teaches and Acts upon"
+        ]
+    }
+],
+    [
+        {
+        "question": "Love of Ahle Bait (a.s.) is the foundation of _________",
+        "options": [
+            "Faith",
+            "Prayers",
+            "Tawheed",
+            "Adl"
+        ]
+    },
+    {
+        "question": "Allah has instilled His true recognition (Tauheed) in everyone’s",
+        "options": [
+            "Heart",
+            "Brain",
+            "Faith",
+            "Nature"
+        ]
+    },
+    {
+        "question": "According to traditions, Why has Allah (s.w.t) granted a lofty and elevated status to the tongue?",
+        "options": [
+            "Proclaims Tawheed",
+            "Recites Holy Quran",
+            "Recites Salawat",
+            "All the Above"
+        ]
+    },
+    {
+        "question": "According to traditions: One of the attributes of Allah (s.w.t.) is that His knowledge encompasses the entire _____",
+        "options": [
+            "Humanity",
+            "Earth",
+            "Universe",
+            "Jinns"
+        ]
+    },
+    {
+        "question": "Every Muslim should accept his beliefs in the light of reason and _______",
+        "options": [
+            "Logic",
+            "Intellect",
+            "Proof",
+            "Books"
+        ]
+    }
+],
+    [
+        {
+        "question": "Sending of the Prophets and Messengers would help people to achieve Aim of _________ ?",
+        "options": [
+            "Allah (s.w.t.)",
+            "Creation",
+            "Holy Prophet (s.a.w.a.)",
+            "The Imam (a.s.)"
+        ]
+    },
+    {
+        "question": "True Prophet should have some exclusive ___________ in order to differentiate them from false claimants",
+        "options": [
+            "Aqlaq",
+            "Personality",
+            "Characteristics",
+            "Nature"
+        ]
+    },
+    {
+        "question": "What was the age of Holy Prophet (s.a.w.a.) when he announced his Prophethood?",
+        "options": [
+            "20 years",
+            "30 years",
+            "40 years",
+            "50 years"
+        ]
+    },
+    {
+        "question": "Name the Author of the book Al Kafi?",
+        "options": [
+            "Shaikh Al Kulayni (a.r.)",
+            "Allama Majlisi",
+            "Allama Al Hilli",
+            "None of them"
+        ]
+    },
+    {
+        "question": "The Shariat of Hazrat Nooh (a.s) was valid till it was abrogated by the Shariat of which Prophet (a.s.)?",
+        "options": [
+            "Hazrat Isa (a.s.)",
+            "Hazrat Yusuf (a.s.)",
+            "Hazrat Moosa (a.s.)",
+            "Hazrat Ibrahim (a.s.)"
+        ]
+    }
+],
+    [
+        {
+        "question": "According to a tradition, how many sects will Islam split into?",
+        "options": [
+            "70",
+            "71",
+            "72",
+            "73"
+        ]
+    },
+    {
+        "question": "According to Islam, who is responsible for making laws?",
+        "options": [
+            "Allah (s.w.t.)",
+            "Holy Prophet (s.a.w.a.)",
+            "Imam (a.s.)",
+            "People"
+        ]
+    },
+    {
+        "question": "At which occasion did Holy Prophet (s.a.w.a.) 1st proclaim Ali (a.s.) as his successor?",
+        "options": [
+            "Ghadeer e Khum",
+            "Dawat e Zulasheera",
+            "At Mubahilaa",
+            "In Shura"
+        ]
+    },
+    {
+        "question": "What is the fundamental nature of all actions in an Islamic government?",
+        "options": [
+            "For the Prophet (s.a.w.s.)",
+            "For the Imam (a.s.)",
+            "For Allah (s.w.t.)",
+            "For the community"
+        ]
+    },
+    {
+        "question": "Which quality must an Imam possess to ensure he does not mislead others?",
+        "options": [
+            "Miracle",
+            "Wealth",
+            "Infallibility",
+            "Power"
+        ]
+    }
+],
+    [
+        {
+        "question": "Name the Aunt of Imam Hasan al-Askari (a.s.) who was present at the time of birth of Imam e Zamana (a.t.f.s.)",
+        "options": [
+            "Janabe Halima Khatoon (a.s.)",
+            "Janabe Hakima Khatoon (a.s.)",
+            "Janabe Narjis Khatoon (a.s.)",
+            "None of these"
+        ]
+    },
+    {
+        "question": "Name the 4th special deputy (Nayab-e-Khaas) of Imam-e-Zamana (a.t.f.s)",
+        "options": [
+            "Abul Qasim Husain b. Rauh al-Nawbakhti (a.r.)",
+            "Abu Jafar Mohammad b. Usman b. Saeed al-Amri (a.r.)",
+            "Abu Amr Usman b. Saeed al-Amri (a.r.)",
+            "Abul Ali b. Muhammad al-Seymouri"
+        ]
+    },
+    {
+        "question": "According to traditions: At the time of Zuhoor, Imam Mahdi (a.t.f.s.) will look like a person of ____ years",
+        "options": [
+            "20",
+            "30",
+            "40",
+            "50"
+        ]
+    },
+    {
+        "question": "On the day of Qiyamat, every person will be raised with his ______",
+        "options": [
+            "Father",
+            "Mother",
+            "Prophet (a.s.)",
+            "Imam (a.s.)"
+        ]
+    },
+    {
+        "question": "As per traditions: within how many months will Imam e Zamana (a.t.f.s) conquer the earth from east to west after zuhoor?",
+        "options": [
+            "8 months",
+            "6 months",
+            "4 months",
+            "2 months"
+        ]
+    }
+],
+    [
+        {
+        "question": "Qiyamat will be in what form?",
+        "options": [
+            "In Materialistic form",
+            "In Spiritual form",
+            "In Physical form",
+            "None of the above"
+        ]
+    },
+    {
+        "question": "Which Prophet's experience with a decayed bone is used as proof of Qiyamat in Surah Yasin?",
+        "options": [
+            "Prophet Moosa (a.s.)",
+            "Prophet Nooh (a.s.)",
+            "Prophet Ibrahim (a.s.)",
+            "None of these"
+        ]
+    },
+    {
+        "question": "What do wise people shine like according to the Torah?",
+        "options": [
+            "Stars",
+            "The sun",
+            "The moon",
+            "The earth"
+        ]
+    },
+    {
+        "question": "What phenomenon is used as a proof that the soul is non-materialistic?",
+        "options": [
+            "Dreaming",
+            "Walking in sleep",
+            "Talking in sleep",
+            "None of the above"
+        ]
+    },
+    {
+        "question": "In Surah Baqarah, which Prophet is involved in the event of birds coming back to life?",
+        "options": [
+            "Prophet Moosa (a.s.)",
+            "Prophet Dawood (a.s.)",
+            "Prophet Isa (a.s.)",
+            "Prophet Ibrahim (a.s.)"
+        ]
+    }
+]
     ];
 
     function generateTableRows() {
@@ -119,17 +358,34 @@
         }
     }
 
-    let currentCell = null;
-
-    function showPopup(topicName, point, question, cell) {
+    // Function to show the popup with question and options
+    function showPopup(topicName, point, questionObj, cell) {
         // Update the popup content
         const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${question}</p>`;
-        document.getElementById("popup").style.display = "flex"; // Show the popup
+        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+
+        // Create a container for options
+        const optionsContainer = document.createElement('div');
+        optionsContainer.classList.add('options-container');
+
+        // Display options as span elements
+        questionObj.options.forEach((option) => {
+            const optionElement = document.createElement('span');
+            optionElement.classList.add('option');
+            optionElement.textContent = option;
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Append the options container to the popup content
+        content.appendChild(optionsContainer);
+
+        // Show the popup
+        document.getElementById("popup").style.display = "flex";
 
         // Set currentCell to the clicked cell for clearing later
         currentCell = cell;
     }
+
 
     function closePopup() {
         if (currentCell) {
