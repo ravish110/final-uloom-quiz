@@ -61,7 +61,8 @@ const questions = [
                 "Remembrance of Allah (s.w.t.)",
                 "Message of Allah (s.w.t.)",
                 "None of Above"
-            ]
+            ],
+            "correctAnswer": 1
         },
         {
             "question": "Imam Sadiq (AS) said: Do not recite the Quran hastily, but recite it with ________",
@@ -359,33 +360,55 @@ const questions = [
         }
     }
 
-    // Function to show the popup with question and options
     function showPopup(topicName, point, questionObj, cell) {
-        // Update the popup content
-        const content = document.getElementById("popup-content");
-        content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
+    // Update the popup content
+    const content = document.getElementById("popup-content");
+    content.innerHTML = `<h3>${topicName} (Point: ${point})</h3><p>${questionObj.question}</p>`;
 
-        // Create a container for options
-        const optionsContainer = document.createElement('div');
-        optionsContainer.classList.add('options-container');
+    // Create a container for options
+    const optionsContainer = document.createElement('div');
+    optionsContainer.classList.add('options-container');
 
-        // Display options as span elements
-        questionObj.options.forEach((option) => {
-            const optionElement = document.createElement('span');
-            optionElement.classList.add('option');
-            optionElement.textContent = option;
-            optionsContainer.appendChild(optionElement);
+    // Display options as span elements
+    questionObj.options.forEach((option, index) => {
+        const optionElement = document.createElement('span');
+        optionElement.classList.add('option');
+        optionElement.textContent = option;
+
+        // Add event listener to handle clicks
+        optionElement.addEventListener('click', () => {
+            // If no option has been selected before, process the click
+            const allOptions = optionsContainer.querySelectorAll('.option');
+            if (!allOptions[0].classList.contains('clicked')) {
+                // Check if clicked option is correct
+                if (index === questionObj.correctAnswer) {
+                    optionElement.style.backgroundColor = 'green'; // Correct answer
+                } else {
+                    optionElement.style.backgroundColor = 'red'; // Incorrect answer
+                }
+
+                // Disable all options after the first click
+                allOptions.forEach(opt => opt.style.pointerEvents = 'none'); // Disable clicks
+
+                // Mark this option as clicked
+                allOptions[0].classList.add('clicked');
+            }
         });
 
-        // Append the options container to the popup content
-        content.appendChild(optionsContainer);
+        optionsContainer.appendChild(optionElement);
+    });
 
-        // Show the popup
-        document.getElementById("popup").style.display = "flex";
+    // Append the options container to the popup content
+    content.appendChild(optionsContainer);
 
-        // Set currentCell to the clicked cell for clearing later
-        currentCell = cell;
-    }
+    // Show the popup
+    document.getElementById("popup").style.display = "flex";
+
+    // Set currentCell to the clicked cell for clearing later
+    currentCell = cell;
+}
+
+
 
     function closePopup() {
         if (currentCell) {
